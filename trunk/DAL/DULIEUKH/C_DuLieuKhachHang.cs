@@ -233,20 +233,20 @@ namespace CAPNUOCTHUDUC.DAL.DULIEUKH
             return null;
         }
 
-        //public static bool InsertGHICHU(TB_GHICHU gc)
-        //{
-        //    try
-        //    {
-        //        db.TB_GHICHUs.InsertOnSubmit(gc);
-        //        db.SubmitChanges();
-        //        return true;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        log.Error(ex.Message);
-        //    }
-        //    return false;
-        //}
+        public static bool InsertGHICHU(TB_GHICHU gc)
+        {
+            try
+            {
+                db.TB_GHICHUs.InsertOnSubmit(gc);
+                db.SubmitChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+            }
+            return false;
+        }
 
         public static DataTable lisGhiChu(string danhbo)
         {

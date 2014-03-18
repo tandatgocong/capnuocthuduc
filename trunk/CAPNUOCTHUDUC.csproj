@@ -62,6 +62,8 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
       <HintPath>bin\Debug\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="String_Indentity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\String_Indentity.dll</HintPath>
@@ -95,21 +97,61 @@
     <Compile Include="Billding\getDataBillding.Designer.cs">
       <DependentUpon>getDataBillding.cs</DependentUpon>
     </Compile>
+    <Compile Include="CAPNUOCTHUDUCDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAPNUOCTHUDUCDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DAL\DULIEUKH\C_DuLieuKhachHang.cs" />
     <Compile Include="DAL\LinQConnection.cs" />
     <Compile Include="DAL\QLDHN\C_BaoThay.cs" />
+    <Compile Include="DAL\SYS\C_PHUONG.cs" />
+    <Compile Include="DAL\SYS\C_QUAN.cs" />
     <Compile Include="DAL\ThaoTac.cs" />
+    <Compile Include="Forms\DHN\BC\THONGKEDHN.cs">
+      <DependentUpon>THONGKEDHN.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\DHN\BC\THONGKEDHN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>THONGKEDHN.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DHN\frm_BaoCaoTongKet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DHN\frm_BaoCaoTongKet.designer.cs">
+      <DependentUpon>frm_BaoCaoTongKet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DHN\frm_DieuChinhThongTin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DHN\frm_DieuChinhThongTin.designer.cs">
+      <DependentUpon>frm_DieuChinhThongTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DHN\frm_KiemTraThayDinhKy.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\DHN\frm_KiemTraThayDinhKy.designer.cs">
       <DependentUpon>frm_KiemTraThayDinhKy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DHN\frm_KiemTraThayDinhKy_.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DHN\frm_KiemTraThayDinhKy_.designer.cs">
+      <DependentUpon>frm_KiemTraThayDinhKy_.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DHN\frm_Option_BT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\DHN\frm_Option_BT.designer.cs">
       <DependentUpon>frm_Option_BT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DHN\Tab\A_tab_ThongKeDHN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DHN\Tab\A_tab_ThongKeDHN.designer.cs">
+      <DependentUpon>A_tab_ThongKeDHN.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DHN\UserControl1.cs">
       <SubType>UserControl</SubType>
@@ -151,16 +193,51 @@
     <None Include="bin\Debug\LOTRINH.xls" />
     <None Include="bin\Debug\News.xls" />
     <None Include="bin\Debug\user.dat" />
+    <None Include="CAPNUOCTHUDUCDataSet.xsc">
+      <DependentUpon>CAPNUOCTHUDUCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CAPNUOCTHUDUCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAPNUOCTHUDUCDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAPNUOCTHUDUCDataSet.xss">
+      <DependentUpon>CAPNUOCTHUDUCDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\DHN\BC\THONGKEDHN.xsc">
+      <DependentUpon>THONGKEDHN.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\DHN\BC\THONGKEDHN.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>THONGKEDHN.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\DHN\BC\THONGKEDHN.xss">
+      <DependentUpon>THONGKEDHN.xsd</DependentUpon>
+    </None>
     <None Include="lib\app.conf" />
     <None Include="lib\app.settings" />
     <None Include="lib\LOTRINH.xls" />
     <None Include="lib\News.xls" />
     <None Include="lib\user.dat" />
+    <EmbeddedResource Include="Forms\DHN\BC\Report1.rdlc" />
+    <EmbeddedResource Include="Forms\DHN\frm_BaoCaoTongKet.resx">
+      <DependentUpon>frm_BaoCaoTongKet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DHN\frm_DieuChinhThongTin.resx">
+      <DependentUpon>frm_DieuChinhThongTin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DHN\frm_KiemTraThayDinhKy.resx">
       <DependentUpon>frm_KiemTraThayDinhKy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DHN\frm_KiemTraThayDinhKy_.resx">
+      <DependentUpon>frm_KiemTraThayDinhKy_.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DHN\frm_Option_BT.resx">
       <DependentUpon>frm_Option_BT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DHN\Tab\A_tab_ThongKeDHN.resx">
+      <DependentUpon>A_tab_ThongKeDHN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
@@ -233,6 +310,9 @@
     <Content Include="bin\Debug\String_Indentity.dll" />
     <Content Include="bin\Debug\String_Indentity_.dll" />
     <Content Include="bin\Debug\VniToUnicode.dll" />
+    <Content Include="Database\A. DATABASES.sql" />
+    <Content Include="Database\B. VIEW - PROC.sql" />
+    <Content Include="Database\XU LY DU LIEU.sql" />
     <Content Include="icon.ico" />
     <Content Include="lib\CrystalDecisions.CrystalReports.Engine.dll" />
     <Content Include="lib\DevComponents.DotNetBar2.dll" />
