@@ -20,23 +20,23 @@ namespace CAPNUOCTHUDUC.DAL
             result = " AND (";
             if (td.Checked)
             {
-                result += " OR (LEFT(GIAOUOC,2)='TD') ";
+                result += " OR (LEFT(HOPDONG,2)='TD') ";
             }
             if (q9.Checked)
             {
-                 result += " OR (LEFT(GIAOUOC,2)='Q9') ";
+                result += " OR (LEFT(HOPDONG,2)='Q9') ";
             }
             if (q2.Checked)
             {
-                result += " OR (LEFT(GIAOUOC,2)='Q2') ";
+                result += " OR (LEFT(HOPDONG,2)='Q2') ";
             }
             if (bd.Checked)
             {
-                result += " OR (LEFT(GIAOUOC,2)='BD') ";
+                result += " OR (LEFT(HOPDONG,2)='BD') ";
             }
 
             result += " )";
-            result = result.Replace(" AND ( OR", " AND ( ");
+            result = result.Replace(" AND ( OR", " AND ( ").Replace(" AND ( )","");
             return result;
         }
     }

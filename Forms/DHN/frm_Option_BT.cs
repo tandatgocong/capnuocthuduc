@@ -11,7 +11,7 @@ using CAPNUOCTHUDUC.LinQ;
 using CrystalDecisions.CrystalReports.Engine;
 
 
-namespace CAPNUOCTHUDUC.Forms.QLDHN
+namespace CAPNUOCTHUDUC.Forms.DHN
 {
     public partial class frm_Option_BT : Form
     {
@@ -42,12 +42,7 @@ namespace CAPNUOCTHUDUC.Forms.QLDHN
 
             dataBangKe.DataSource = DAL.LinQConnection.getDataTable(sql);
          
-           
 
-            cbLoaiBangKe.DataSource = DAL.QLDHN.C_BaoThay.getLoaiBangKe();
-            cbLoaiBangKe.ValueMember = "LOAIBK";
-            cbLoaiBangKe.DisplayMember = "TENBANGKE";
-            cbLoaiBangKe.SelectedValue = "DK";
 
             DataTable table = DAL.LinQConnection.getDataTable("SELECT TENDONGHO FROM TB_HIEUDONGHO");
             foreach (var item in table.Rows)
@@ -107,19 +102,19 @@ namespace CAPNUOCTHUDUC.Forms.QLDHN
 
         private void cbLoaiBangKe_SelectedValueChanged(object sender, EventArgs e)
         {
-            if ("HC".Equals(this.cbLoaiBangKe.SelectedValue + ""))
-            {
-                title.Text = "BẢNG KÊ BÁO THAY HẠ CỞ ĐỒNG HỒ NƯỚC ";
-            }
-            else
-            {
-                title.Text = "BẢNG KÊ BÁO THAY ĐỒNG HỒ NƯỚC " + this.cbLoaiBangKe.Text;
-            }
-            for (int i = 0; i < dataBangKe.Rows.Count; i++)
-            {
-                dataBangKe.Rows[i].Cells["G_LYDO"].Value = this.cbLoaiBangKe.Text.Replace("THEO", "");
-            }
-            Utilities.DataGridV.formatRows(dataBangKe);
+            //if ("HC".Equals(this.cbLoaiBangKe.SelectedValue + ""))
+            //{
+            //    title.Text = "BẢNG KÊ BÁO THAY HẠ CỞ ĐỒNG HỒ NƯỚC ";
+            //}
+            //else
+            //{
+            //    title.Text = "BẢNG KÊ BÁO THAY ĐỒNG HỒ NƯỚC " + this.cbLoaiBangKe.Text;
+            //}
+            //for (int i = 0; i < dataBangKe.Rows.Count; i++)
+            //{
+            //    dataBangKe.Rows[i].Cells["G_LYDO"].Value = this.cbLoaiBangKe.Text.Replace("THEO", "");
+            //}
+            //Utilities.DataGridV.formatRows(dataBangKe);
         }
 
         public void Add()
@@ -131,13 +126,13 @@ namespace CAPNUOCTHUDUC.Forms.QLDHN
                 thaydh.DHN_STT = int.Parse(dataBangKe.Rows[i].Cells["G_STT"].Value + "");
                 thaydh.DHN_DANHBO = sodanhbo;
                 thaydh.DHN_CHIGOC = dataBangKe.Rows[i].Cells["DHN_CHIGOC"].Value + "";
-                thaydh.DHN_CHISO = int.Parse(dataBangKe.Rows[i].Cells["G_CHISO"].Value + "");
+                thaydh.DHN_CHISO = int.Parse(dataBangKe.Rows[i].Cells["G_CHISO"].Value == null ? (dataBangKe.Rows[i].Cells["G_CHISO"].Value +""):"0");
                 thaydh.DHN_CHITHAN = dataBangKe.Rows[i].Cells["CHITHAN"].Value + "";
                 thaydh.DHN_CODH = dataBangKe.Rows[i].Cells["G_CODHN"].Value + "";
                 thaydh.DHN_DOT = dataBangKe.Rows[i].Cells["DOT"].Value + "";
                 thaydh.DHN_HIEUDHN =  (dataBangKe.Rows[i].Cells["G_HIEUDHN"].Value + "").ToUpper();
                 thaydh.DHN_LANTHAY = DAL.QLDHN.C_BaoThay.getMaxLanThay(sodanhbo) + 1;
-                thaydh.DHN_LOAIBANGKE = this.cbLoaiBangKe.SelectedValue + "";
+                thaydh.DHN_LOAIBANGKE = "DK";
                 thaydh.DHN_LYDOTHAY = dataBangKe.Rows[i].Cells["G_LYDO"].Value + "";
                 thaydh.DHN_NGAYBAOTHAY = DateTime.Now.Date;
                 thaydh.DHN_NGAYGAN = DateTime.Parse(dataBangKe.Rows[i].Cells["NGAYTHAY"].Value + "");

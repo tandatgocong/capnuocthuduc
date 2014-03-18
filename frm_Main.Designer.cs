@@ -63,7 +63,6 @@
             this.panelHome = new System.Windows.Forms.Panel();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.reflectionImage1 = new DevComponents.DotNetBar.Controls.ReflectionImage();
             this.label1 = new System.Windows.Forms.Label();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.lb3 = new DevComponents.DotNetBar.Controls.ReflectionLabel();
@@ -72,13 +71,10 @@
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuDieuChinhKH = new System.Windows.Forms.ToolStripMenuItem();
             this.menuKiemTra = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuDieuChinhKH = new System.Windows.Forms.ToolStripMenuItem();
             this.cmdBaoThay = new System.Windows.Forms.ToolStripMenuItem();
             this.btLoTrinh = new System.Windows.Forms.ToolStripMenuItem();
-            this.yeucaukiemtra = new System.Windows.Forms.ToolStripMenuItem();
-            this.handHeld = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnHoaDon0 = new System.Windows.Forms.ToolStripMenuItem();
             this.baocaoTongKet = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDoiQLDHN = new DevComponents.DotNetBar.RibbonTabItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
@@ -393,7 +389,6 @@
             // panelHome
             // 
             this.panelHome.Controls.Add(this.statusStrip2);
-            this.panelHome.Controls.Add(this.reflectionImage1);
             this.panelHome.Controls.Add(this.label1);
             this.panelHome.Controls.Add(this.labelX4);
             this.panelHome.Controls.Add(this.lb3);
@@ -420,25 +415,15 @@
             // 
             this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.Blue;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(536, 17);
-            this.toolStripStatusLabel1.Text = "© Copyright  2012 - Tan Hoa Water Supply Company Limted. Developed by Lê Tấn Đạt " +
-                "- 0909933397";
-            // 
-            // reflectionImage1
-            // 
-            this.reflectionImage1.Image = global::CAPNUOCTHUDUC.Properties.Resources.logocty;
-            this.reflectionImage1.Location = new System.Drawing.Point(400, 172);
-            this.reflectionImage1.Name = "reflectionImage1";
-            this.reflectionImage1.ReflectionEnabled = false;
-            this.reflectionImage1.Size = new System.Drawing.Size(219, 219);
-            this.reflectionImage1.TabIndex = 34;
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(104, 17);
+            this.toolStripStatusLabel1.Text = "© Copyright  2014";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(22)))), ((int)(((byte)(111)))));
-            this.label1.Location = new System.Drawing.Point(278, 434);
+            this.label1.Location = new System.Drawing.Point(278, 280);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(467, 40);
             this.label1.TabIndex = 35;
@@ -449,7 +434,7 @@
             this.labelX4.BackColor = System.Drawing.Color.Transparent;
             this.labelX4.Font = new System.Drawing.Font("Wingdings 2", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.labelX4.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.labelX4.Location = new System.Drawing.Point(448, 106);
+            this.labelX4.Location = new System.Drawing.Point(448, 135);
             this.labelX4.Name = "labelX4";
             this.labelX4.Size = new System.Drawing.Size(126, 26);
             this.labelX4.TabIndex = 33;
@@ -458,18 +443,18 @@
             // lb3
             // 
             this.lb3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb3.Location = new System.Drawing.Point(221, 80);
+            this.lb3.Location = new System.Drawing.Point(248, 105);
             this.lb3.Name = "lb3";
             this.lb3.ReflectionEnabled = false;
             this.lb3.Size = new System.Drawing.Size(624, 34);
             this.lb3.TabIndex = 32;
-            this.lb3.Text = " <font size=\"+6\"><font color=\"#B02B2C\">CÔNG TY TNHH MTV CẤP NƯỚC TÂN HÒA</font></" +
+            this.lb3.Text = " <font size=\"+6\"><font color=\"#B02B2C\">CÔNG TY  CỔ PHẦN CẤP NƯỚC THỦ ĐỨC</font></" +
                 "font>";
             // 
             // lb2
             // 
             this.lb2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb2.Location = new System.Drawing.Point(206, 47);
+            this.lb2.Location = new System.Drawing.Point(206, 76);
             this.lb2.Name = "lb2";
             this.lb2.ReflectionEnabled = false;
             this.lb2.Size = new System.Drawing.Size(656, 34);
@@ -480,7 +465,7 @@
             // lb1
             // 
             this.lb1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb1.Location = new System.Drawing.Point(285, 16);
+            this.lb1.Location = new System.Drawing.Point(285, 45);
             this.lb1.Name = "lb1";
             this.lb1.ReflectionEnabled = false;
             this.lb1.Size = new System.Drawing.Size(526, 34);
@@ -528,19 +513,26 @@
             this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuDieuChinhKH,
             this.menuKiemTra,
+            this.menuDieuChinhKH,
             this.cmdBaoThay,
             this.btLoTrinh,
-            this.yeucaukiemtra,
-            this.handHeld,
-            this.mnHoaDon0,
             this.baocaoTongKet});
             this.menuStrip1.Location = new System.Drawing.Point(3, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1172, 27);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuKiemTra
+            // 
+            this.menuKiemTra.ForeColor = System.Drawing.Color.Black;
+            this.menuKiemTra.Image = global::CAPNUOCTHUDUC.Properties.Resources.Ok;
+            this.menuKiemTra.Name = "menuKiemTra";
+            this.menuKiemTra.ShowShortcutKeys = false;
+            this.menuKiemTra.Size = new System.Drawing.Size(213, 23);
+            this.menuKiemTra.Text = "Cập Nhật Thông Tin ĐHN";
+            this.menuKiemTra.Click += new System.EventHandler(this.menuKiemTra_Click);
             // 
             // menuDieuChinhKH
             // 
@@ -551,65 +543,30 @@
             this.menuDieuChinhKH.Text = "Theo Dõi Thay Định Kỳ";
             this.menuDieuChinhKH.Click += new System.EventHandler(this.menuDieuChinhKH_Click);
             // 
-            // menuKiemTra
-            // 
-            this.menuKiemTra.ForeColor = System.Drawing.Color.Black;
-            this.menuKiemTra.Image = global::CAPNUOCTHUDUC.Properties.Resources.Ok;
-            this.menuKiemTra.Name = "menuKiemTra";
-            this.menuKiemTra.ShowShortcutKeys = false;
-            this.menuKiemTra.Size = new System.Drawing.Size(131, 23);
-            this.menuKiemTra.Text = "Thay Định Kỳ";
-            // 
             // cmdBaoThay
             // 
             this.cmdBaoThay.ForeColor = System.Drawing.Color.Black;
             this.cmdBaoThay.Image = global::CAPNUOCTHUDUC.Properties.Resources.Applications;
             this.cmdBaoThay.Name = "cmdBaoThay";
-            this.cmdBaoThay.Size = new System.Drawing.Size(142, 23);
-            this.cmdBaoThay.Text = "Báo Thay ĐHN";
+            this.cmdBaoThay.Size = new System.Drawing.Size(166, 23);
+            this.cmdBaoThay.Text = "Số Liệu Thay ĐHN";
             // 
             // btLoTrinh
             // 
             this.btLoTrinh.ForeColor = System.Drawing.Color.Black;
             this.btLoTrinh.Image = global::CAPNUOCTHUDUC.Properties.Resources.Arrow2_Right1;
             this.btLoTrinh.Name = "btLoTrinh";
-            this.btLoTrinh.Size = new System.Drawing.Size(146, 23);
-            this.btLoTrinh.Text = "Lộ Trình Đọc Số";
+            this.btLoTrinh.Size = new System.Drawing.Size(153, 23);
+            this.btLoTrinh.Text = "Số Liệu Gắn Mới";
             this.btLoTrinh.Click += new System.EventHandler(this.btChuyenBK_Click);
-            // 
-            // yeucaukiemtra
-            // 
-            this.yeucaukiemtra.ForeColor = System.Drawing.Color.Black;
-            this.yeucaukiemtra.Image = global::CAPNUOCTHUDUC.Properties.Resources.Stats2;
-            this.yeucaukiemtra.Name = "yeucaukiemtra";
-            this.yeucaukiemtra.Size = new System.Drawing.Size(144, 23);
-            this.yeucaukiemtra.Text = "Y.Cầu Kiểm Tra";
-            this.yeucaukiemtra.Click += new System.EventHandler(this.yeucaukiemtra_Click);
-            // 
-            // handHeld
-            // 
-            this.handHeld.ForeColor = System.Drawing.Color.Black;
-            this.handHeld.Image = global::CAPNUOCTHUDUC.Properties.Resources.Puzzle;
-            this.handHeld.Name = "handHeld";
-            this.handHeld.Size = new System.Drawing.Size(105, 23);
-            this.handHeld.Text = "HandHeld";
-            this.handHeld.Visible = false;
-            // 
-            // mnHoaDon0
-            // 
-            this.mnHoaDon0.ForeColor = System.Drawing.Color.Black;
-            this.mnHoaDon0.Image = global::CAPNUOCTHUDUC.Properties.Resources.Applications;
-            this.mnHoaDon0.Name = "mnHoaDon0";
-            this.mnHoaDon0.Size = new System.Drawing.Size(144, 23);
-            this.mnHoaDon0.Text = "Theo Dõi HĐ=0";
             // 
             // baocaoTongKet
             // 
             this.baocaoTongKet.ForeColor = System.Drawing.Color.Black;
             this.baocaoTongKet.Image = global::CAPNUOCTHUDUC.Properties.Resources.Stats2;
             this.baocaoTongKet.Name = "baocaoTongKet";
-            this.baocaoTongKet.Size = new System.Drawing.Size(95, 23);
-            this.baocaoTongKet.Text = "Báo Cáo";
+            this.baocaoTongKet.Size = new System.Drawing.Size(165, 23);
+            this.baocaoTongKet.Text = "Báo Cáo Thống Kê";
             this.baocaoTongKet.Click += new System.EventHandler(this.baocaoTongKet_Click);
             // 
             // menuDoiQLDHN
@@ -651,7 +608,7 @@
             this.IsMdiContainer = true;
             this.Name = "frm_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tan Hoa Water Co.., Ltd";
+            this.Text = "Thu Duc Wasuco Co.., Ltd";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Main_FormClosing);
             this.Load += new System.EventHandler(this.frm_Main_Load);
@@ -716,7 +673,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuKiemTra;
         private System.Windows.Forms.ToolStripMenuItem baocaoTongKet;
         private System.Windows.Forms.Panel panelHome;
-        private DevComponents.DotNetBar.Controls.ReflectionImage reflectionImage1;
         private System.Windows.Forms.Label label1;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.Controls.ReflectionLabel lb3;
@@ -728,10 +684,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem btLoTrinh;
         private System.Windows.Forms.ToolStripMenuItem menuDieuChinhKH;
-        private System.Windows.Forms.ToolStripMenuItem yeucaukiemtra;
         private System.Windows.Forms.ToolStripMenuItem menuDieuChinhThongSo;
-        private System.Windows.Forms.ToolStripMenuItem handHeld;
-        private System.Windows.Forms.ToolStripMenuItem mnHoaDon0;
 
 
     }

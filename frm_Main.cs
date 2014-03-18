@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using log4net;
 using System.Configuration;
-using CAPNUOCTHUDUC.Forms.QLDHN;
+using CAPNUOCTHUDUC.Forms.DHN;
 namespace CAPNUOCTHUDUC
 {
     public partial class frm_Main : Form
@@ -58,11 +58,11 @@ namespace CAPNUOCTHUDUC
 
         private void baocaoTongKet_Click(object sender, EventArgs e)
         {
-            //PanelContent.Controls.Clear();
-            //frm_BaoCaoTongKet baothay = new frm_BaoCaoTongKet();
-            //baothay.Height = PanelContent.Size.Height - 20;
-            //baothay.Width = PanelContent.Size.Width - 20;
-            //PanelContent.Controls.Add(baothay);
+            PanelContent.Controls.Clear();
+            frm_BaoCaoTongKet baothay = new frm_BaoCaoTongKet();
+            baothay.Height = PanelContent.Size.Height - 20;
+            baothay.Width = PanelContent.Size.Width - 20;
+            PanelContent.Controls.Add(baothay);
         }
 
         private void menuHeThong_Click(object sender, EventArgs e)
@@ -142,6 +142,18 @@ namespace CAPNUOCTHUDUC
             //baothay.Height = PanelContent.Size.Height - 5;
             //baothay.Width = PanelContent.Size.Width - 5;
             //PanelContent.Controls.Add(baothay);
+        }
+
+        private void menuKiemTra_Click(object sender, EventArgs e)
+        {
+            PanelContent.Controls.Clear();
+            // frm_LayDuLieuGanMoi_Ky baothay = new frm_LayDuLieuGanMoi_Ky();
+            frm_DieuChinhThongTin baothay = new frm_DieuChinhThongTin();
+            //baothay.Height = PanelContent.Size.Height - 20;
+            //baothay.Width = PanelContent.Size.Width - 20;
+            baothay.Height = PanelContent.Size.Height - 5;
+            baothay.Width = PanelContent.Size.Width - 5;
+            PanelContent.Controls.Add(baothay);
         }
     }
 }

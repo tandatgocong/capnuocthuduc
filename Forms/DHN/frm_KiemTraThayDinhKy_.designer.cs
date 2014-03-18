@@ -1,4 +1,4 @@
-﻿namespace CAPNUOCTHUDUC.Forms.DHN
+﻿namespace CAPNUOCTHUDUC.Forms.QLDHN
 {
     partial class frm_KiemTraThayDinhKy
     {
@@ -29,19 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cbNamLD = new System.Windows.Forms.ComboBox();
-            this.nldCheck = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BDcheck = new System.Windows.Forms.CheckBox();
             this.Q2check = new System.Windows.Forms.CheckBox();
@@ -64,8 +62,6 @@
             this.dataGrid = new System.Windows.Forms.DataGridView();
             this.checkChon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.DOT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CHISOKYTRUOC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.G_DANHBO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LOTRINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NGAYGAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -98,7 +94,8 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.cbNamLD);
-            this.splitContainer1.Panel1.Controls.Add(this.nldCheck);
+            this.splitContainer1.Panel1.Controls.Add(this.checkBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel1.Controls.Add(this.cbDot);
             this.splitContainer1.Panel1.Controls.Add(this.labelX2);
             this.splitContainer1.Panel1.Controls.Add(this.lbTongDHN);
@@ -112,7 +109,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.checHieu);
             this.splitContainer1.Panel1.Controls.Add(this.ckNgayThay);
             this.splitContainer1.Panel1.Controls.Add(this.lbPaing);
-            this.splitContainer1.Panel1.Controls.Add(this.groupBox1);
             // 
             // splitContainer1.Panel2
             // 
@@ -127,20 +123,20 @@
             this.cbNamLD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNamLD.DropDownWidth = 130;
             this.cbNamLD.FormattingEnabled = true;
-            this.cbNamLD.Location = new System.Drawing.Point(462, 90);
+            this.cbNamLD.Location = new System.Drawing.Point(448, 90);
             this.cbNamLD.Name = "cbNamLD";
             this.cbNamLD.Size = new System.Drawing.Size(118, 27);
-            this.cbNamLD.TabIndex = 717;
+            this.cbNamLD.TabIndex = 715;
             // 
-            // nldCheck
+            // checkBox1
             // 
-            this.nldCheck.AutoSize = true;
-            this.nldCheck.Location = new System.Drawing.Point(462, 64);
-            this.nldCheck.Name = "nldCheck";
-            this.nldCheck.Size = new System.Drawing.Size(117, 23);
-            this.nldCheck.TabIndex = 716;
-            this.nldCheck.Text = "Năm Lắp Đặt";
-            this.nldCheck.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(448, 64);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(117, 23);
+            this.checkBox1.TabIndex = 714;
+            this.checkBox1.Text = "Năm Lắp Đặt";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -149,10 +145,10 @@
             this.groupBox1.Controls.Add(this.Q9check);
             this.groupBox1.Controls.Add(this.TDcheck);
             this.groupBox1.Controls.Add(this.DoiCheck);
-            this.groupBox1.Location = new System.Drawing.Point(3, 4);
+            this.groupBox1.Location = new System.Drawing.Point(3, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1235, 127);
-            this.groupBox1.TabIndex = 714;
+            this.groupBox1.Size = new System.Drawing.Size(1257, 55);
+            this.groupBox1.TabIndex = 713;
             this.groupBox1.TabStop = false;
             // 
             // BDcheck
@@ -164,7 +160,6 @@
             this.BDcheck.TabIndex = 0;
             this.BDcheck.Text = "Bình Dương";
             this.BDcheck.UseVisualStyleBackColor = true;
-            this.BDcheck.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
             // 
             // Q2check
             // 
@@ -175,7 +170,6 @@
             this.Q2check.TabIndex = 0;
             this.Q2check.Text = "Quận 2";
             this.Q2check.UseVisualStyleBackColor = true;
-            this.Q2check.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
             // 
             // Q9check
             // 
@@ -186,7 +180,6 @@
             this.Q9check.TabIndex = 0;
             this.Q9check.Text = "Quận 9";
             this.Q9check.UseVisualStyleBackColor = true;
-            this.Q9check.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
             // 
             // TDcheck
             // 
@@ -197,8 +190,6 @@
             this.TDcheck.TabIndex = 0;
             this.TDcheck.Text = "Thủ Đức";
             this.TDcheck.UseVisualStyleBackColor = true;
-            this.TDcheck.CheckedChanged += new System.EventHandler(this.TDcheck_CheckedChanged);
-            this.TDcheck.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
             // 
             // DoiCheck
             // 
@@ -211,7 +202,6 @@
             this.DoiCheck.TabIndex = 0;
             this.DoiCheck.Text = "Đội";
             this.DoiCheck.UseVisualStyleBackColor = true;
-            this.DoiCheck.CheckedChanged += new System.EventHandler(this.DoiCheck_CheckedChanged);
             // 
             // cbDot
             // 
@@ -239,7 +229,7 @@
             "18",
             "19",
             "20"});
-            this.cbDot.Location = new System.Drawing.Point(609, 90);
+            this.cbDot.Location = new System.Drawing.Point(586, 87);
             this.cbDot.Name = "cbDot";
             this.cbDot.Size = new System.Drawing.Size(68, 27);
             this.cbDot.TabIndex = 710;
@@ -249,7 +239,7 @@
             this.labelX2.BackColor = System.Drawing.Color.Transparent;
             this.labelX2.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.labelX2.Location = new System.Drawing.Point(618, 65);
+            this.labelX2.Location = new System.Drawing.Point(595, 62);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(48, 22);
             this.labelX2.TabIndex = 709;
@@ -319,7 +309,7 @@
             this.cbHieuDongHo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHieuDongHo.DropDownWidth = 130;
             this.cbHieuDongHo.FormattingEnabled = true;
-            this.cbHieuDongHo.Location = new System.Drawing.Point(310, 90);
+            this.cbHieuDongHo.Location = new System.Drawing.Point(318, 90);
             this.cbHieuDongHo.Name = "cbHieuDongHo";
             this.cbHieuDongHo.Size = new System.Drawing.Size(118, 27);
             this.cbHieuDongHo.TabIndex = 8;
@@ -373,17 +363,6 @@
             // 
             this.cbCoDH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCoDH.FormattingEnabled = true;
-            this.cbCoDH.Items.AddRange(new object[] {
-            "15",
-            "20",
-            "25",
-            "40",
-            "50",
-            "75",
-            "80",
-            "100",
-            "150",
-            "200"});
             this.cbCoDH.Location = new System.Drawing.Point(35, 90);
             this.cbCoDH.Name = "cbCoDH";
             this.cbCoDH.Size = new System.Drawing.Size(68, 27);
@@ -392,11 +371,11 @@
             // checHieu
             // 
             this.checHieu.AutoSize = true;
-            this.checHieu.Location = new System.Drawing.Point(310, 64);
+            this.checHieu.Location = new System.Drawing.Point(318, 64);
             this.checHieu.Name = "checHieu";
-            this.checHieu.Size = new System.Drawing.Size(127, 23);
+            this.checHieu.Size = new System.Drawing.Size(101, 23);
             this.checHieu.TabIndex = 5;
-            this.checHieu.Text = "Theo Hiệu ĐH";
+            this.checHieu.Text = "Hiệu ĐHN";
             this.checHieu.UseVisualStyleBackColor = true;
             // 
             // ckNgayThay
@@ -426,20 +405,18 @@
             // 
             this.dataGrid.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 12F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.checkChon,
             this.DOT,
-            this.CODE,
-            this.CHISOKYTRUOC,
             this.G_DANHBO,
             this.LOTRINH,
             this.NGAYGAN,
@@ -471,35 +448,17 @@
             // DOT
             // 
             this.DOT.DataPropertyName = "DOT";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DOT.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DOT.DefaultCellStyle = dataGridViewCellStyle10;
             this.DOT.HeaderText = "ĐỢT";
             this.DOT.Name = "DOT";
             this.DOT.Width = 70;
             // 
-            // CODE
-            // 
-            this.CODE.DataPropertyName = "CODE";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CODE.DefaultCellStyle = dataGridViewCellStyle3;
-            this.CODE.HeaderText = "CODE";
-            this.CODE.Name = "CODE";
-            this.CODE.Width = 50;
-            // 
-            // CHISOKYTRUOC
-            // 
-            this.CHISOKYTRUOC.DataPropertyName = "CHISOKYTRUOC";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CHISOKYTRUOC.DefaultCellStyle = dataGridViewCellStyle4;
-            this.CHISOKYTRUOC.HeaderText = "CHỈ SỐ";
-            this.CHISOKYTRUOC.Name = "CHISOKYTRUOC";
-            this.CHISOKYTRUOC.Width = 90;
-            // 
             // G_DANHBO
             // 
             this.G_DANHBO.DataPropertyName = "DANHBO";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.G_DANHBO.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.G_DANHBO.DefaultCellStyle = dataGridViewCellStyle11;
             this.G_DANHBO.HeaderText = "DANH BỘ";
             this.G_DANHBO.Name = "G_DANHBO";
             this.G_DANHBO.Width = 145;
@@ -507,8 +466,8 @@
             // LOTRINH
             // 
             this.LOTRINH.DataPropertyName = "LOTRINH";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.LOTRINH.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.LOTRINH.DefaultCellStyle = dataGridViewCellStyle12;
             this.LOTRINH.HeaderText = "LỘ TRÌNH";
             this.LOTRINH.Name = "LOTRINH";
             this.LOTRINH.Width = 110;
@@ -516,12 +475,12 @@
             // NGAYGAN
             // 
             this.NGAYGAN.DataPropertyName = "NGAYTHAY";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.Format = "dd/MM/yyyy";
-            this.NGAYGAN.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.Format = "dd/MM/yyyy";
+            this.NGAYGAN.DefaultCellStyle = dataGridViewCellStyle13;
             this.NGAYGAN.HeaderText = "NGÀY GẮN";
             this.NGAYGAN.Name = "NGAYGAN";
-            this.NGAYGAN.Width = 115;
+            this.NGAYGAN.Width = 118;
             // 
             // HOTEN
             // 
@@ -540,8 +499,8 @@
             // hieudh
             // 
             this.hieudh.DataPropertyName = "HIEUDH";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.hieudh.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.hieudh.DefaultCellStyle = dataGridViewCellStyle14;
             this.hieudh.HeaderText = "HIỆU ĐH";
             this.hieudh.Name = "hieudh";
             this.hieudh.Width = 110;
@@ -549,16 +508,17 @@
             // SOTHAN
             // 
             this.SOTHAN.DataPropertyName = "SOTHANDH";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SOTHAN.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SOTHAN.DefaultCellStyle = dataGridViewCellStyle15;
             this.SOTHAN.HeaderText = "SỐ THÂN";
             this.SOTHAN.Name = "SOTHAN";
+            this.SOTHAN.Width = 120;
             // 
             // CODHN
             // 
             this.CODHN.DataPropertyName = "CODH";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.CODHN.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.CODHN.DefaultCellStyle = dataGridViewCellStyle16;
             this.CODHN.HeaderText = "CỠ";
             this.CODHN.Name = "CODHN";
             this.CODHN.Width = 60;
@@ -633,8 +593,6 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkChon;
         private System.Windows.Forms.DataGridViewTextBoxColumn DOT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CODE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CHISOKYTRUOC;
         private System.Windows.Forms.DataGridViewTextBoxColumn G_DANHBO;
         private System.Windows.Forms.DataGridViewTextBoxColumn LOTRINH;
         private System.Windows.Forms.DataGridViewTextBoxColumn NGAYGAN;
@@ -651,6 +609,6 @@
         private System.Windows.Forms.CheckBox TDcheck;
         private System.Windows.Forms.CheckBox DoiCheck;
         private System.Windows.Forms.ComboBox cbNamLD;
-        private System.Windows.Forms.CheckBox nldCheck;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
