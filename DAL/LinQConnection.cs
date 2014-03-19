@@ -61,13 +61,12 @@ namespace CAPNUOCTHUDUC.DAL
                 result = Convert.ToInt32(cmd.ExecuteNonQuery());
                 conn.Close();
                 db.Connection.Close();
-                db.SubmitChanges();
+                db.SubmitChanges();              
                 return result;
             }
             catch (Exception ex)
             {
                 log.Error("LinQConnection ExecuteCommand_ : " + sql);
-                log.Error("LinQConnection ExecuteCommand_ : " + ex.Message);
 
             }
             finally

@@ -41,7 +41,13 @@
             this.comboItem2 = new DevComponents.Editors.ComboItem();
             this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbLoaiBC = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem25 = new DevComponents.Editors.ComboItem();
+            this.comboItem26 = new DevComponents.Editors.ComboItem();
+            this.comboItem27 = new DevComponents.Editors.ComboItem();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.BDcheck = new System.Windows.Forms.CheckBox();
             this.cbKyDS = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem13 = new DevComponents.Editors.ComboItem();
             this.comboItem14 = new DevComponents.Editors.ComboItem();
@@ -55,19 +61,16 @@
             this.comboItem22 = new DevComponents.Editors.ComboItem();
             this.comboItem23 = new DevComponents.Editors.ComboItem();
             this.comboItem24 = new DevComponents.Editors.ComboItem();
+            this.Q2check = new System.Windows.Forms.CheckBox();
             this.btThem = new DevComponents.DotNetBar.ButtonX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.txtNam = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BDcheck = new System.Windows.Forms.CheckBox();
-            this.Q2check = new System.Windows.Forms.CheckBox();
             this.Q9check = new System.Windows.Forms.CheckBox();
+            this.txtNam = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.TDcheck = new System.Windows.Forms.CheckBox();
             this.DoiCheck = new System.Windows.Forms.CheckBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.comboBoxEx1 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem25 = new DevComponents.Editors.ComboItem();
-            this.comboItem26 = new DevComponents.Editors.ComboItem();
+            this.reportNamLD = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportQP = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.reportHieuDHN = new Microsoft.Reporting.WinForms.ReportViewer();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -159,10 +162,62 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.reportViewer1);
+            this.splitContainer1.Panel2.Controls.Add(this.reportNamLD);
+            this.splitContainer1.Panel2.Controls.Add(this.reportQP);
+            this.splitContainer1.Panel2.Controls.Add(this.reportHieuDHN);
             this.splitContainer1.Size = new System.Drawing.Size(1108, 630);
             this.splitContainer1.SplitterDistance = 80;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbLoaiBC);
+            this.groupBox1.Controls.Add(this.labelX2);
+            this.groupBox1.Controls.Add(this.BDcheck);
+            this.groupBox1.Controls.Add(this.cbKyDS);
+            this.groupBox1.Controls.Add(this.Q2check);
+            this.groupBox1.Controls.Add(this.btThem);
+            this.groupBox1.Controls.Add(this.labelX1);
+            this.groupBox1.Controls.Add(this.Q9check);
+            this.groupBox1.Controls.Add(this.txtNam);
+            this.groupBox1.Controls.Add(this.TDcheck);
+            this.groupBox1.Controls.Add(this.DoiCheck);
+            this.groupBox1.Location = new System.Drawing.Point(2, 1);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1103, 77);
+            this.groupBox1.TabIndex = 715;
+            this.groupBox1.TabStop = false;
+            // 
+            // cbLoaiBC
+            // 
+            this.cbLoaiBC.DisplayMember = "Text";
+            this.cbLoaiBC.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbLoaiBC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLoaiBC.FormattingEnabled = true;
+            this.cbLoaiBC.ItemHeight = 21;
+            this.cbLoaiBC.Items.AddRange(new object[] {
+            this.comboItem25,
+            this.comboItem26,
+            this.comboItem27});
+            this.cbLoaiBC.Location = new System.Drawing.Point(11, 44);
+            this.cbLoaiBC.Name = "cbLoaiBC";
+            this.cbLoaiBC.Size = new System.Drawing.Size(216, 27);
+            this.cbLoaiBC.TabIndex = 31;
+            // 
+            // comboItem25
+            // 
+            this.comboItem25.Text = "Theo Hiệu ĐHN";
+            this.comboItem25.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // comboItem26
+            // 
+            this.comboItem26.Text = "Theo Quận -Phường";
+            this.comboItem26.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            // 
+            // comboItem27
+            // 
+            this.comboItem27.Text = "Theo Năm LĐ";
+            this.comboItem27.TextLineAlignment = System.Drawing.StringAlignment.Center;
             // 
             // labelX2
             // 
@@ -171,6 +226,17 @@
             this.labelX2.Size = new System.Drawing.Size(46, 23);
             this.labelX2.TabIndex = 26;
             this.labelX2.Text = "NĂM ";
+            // 
+            // BDcheck
+            // 
+            this.BDcheck.AutoSize = true;
+            this.BDcheck.Location = new System.Drawing.Point(424, 14);
+            this.BDcheck.Name = "BDcheck";
+            this.BDcheck.Size = new System.Drawing.Size(82, 17);
+            this.BDcheck.TabIndex = 0;
+            this.BDcheck.Text = "Bình Dương";
+            this.BDcheck.UseVisualStyleBackColor = true;
+            this.BDcheck.CheckedChanged += new System.EventHandler(this.TDcheck_CheckedChanged);
             // 
             // cbKyDS
             // 
@@ -269,6 +335,17 @@
             this.comboItem24.TextAlignment = System.Drawing.StringAlignment.Center;
             this.comboItem24.TextLineAlignment = System.Drawing.StringAlignment.Center;
             // 
+            // Q2check
+            // 
+            this.Q2check.AutoSize = true;
+            this.Q2check.Location = new System.Drawing.Point(339, 14);
+            this.Q2check.Name = "Q2check";
+            this.Q2check.Size = new System.Drawing.Size(61, 17);
+            this.Q2check.TabIndex = 0;
+            this.Q2check.Text = "Quận 2";
+            this.Q2check.UseVisualStyleBackColor = true;
+            this.Q2check.CheckedChanged += new System.EventHandler(this.TDcheck_CheckedChanged);
+            // 
             // btThem
             // 
             this.btThem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -291,6 +368,17 @@
             this.labelX1.TabIndex = 25;
             this.labelX1.Text = "KỲ ĐỌC SỐ :";
             // 
+            // Q9check
+            // 
+            this.Q9check.AutoSize = true;
+            this.Q9check.Location = new System.Drawing.Point(247, 14);
+            this.Q9check.Name = "Q9check";
+            this.Q9check.Size = new System.Drawing.Size(61, 17);
+            this.Q9check.TabIndex = 0;
+            this.Q9check.Text = "Quận 9";
+            this.Q9check.UseVisualStyleBackColor = true;
+            this.Q9check.CheckedChanged += new System.EventHandler(this.TDcheck_CheckedChanged);
+            // 
             // txtNam
             // 
             // 
@@ -303,64 +391,16 @@
             this.txtNam.TabIndex = 27;
             this.txtNam.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.comboBoxEx1);
-            this.groupBox1.Controls.Add(this.labelX2);
-            this.groupBox1.Controls.Add(this.BDcheck);
-            this.groupBox1.Controls.Add(this.cbKyDS);
-            this.groupBox1.Controls.Add(this.Q2check);
-            this.groupBox1.Controls.Add(this.btThem);
-            this.groupBox1.Controls.Add(this.labelX1);
-            this.groupBox1.Controls.Add(this.Q9check);
-            this.groupBox1.Controls.Add(this.txtNam);
-            this.groupBox1.Controls.Add(this.TDcheck);
-            this.groupBox1.Controls.Add(this.DoiCheck);
-            this.groupBox1.Location = new System.Drawing.Point(2, 1);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1103, 77);
-            this.groupBox1.TabIndex = 715;
-            this.groupBox1.TabStop = false;
-            // 
-            // BDcheck
-            // 
-            this.BDcheck.AutoSize = true;
-            this.BDcheck.Location = new System.Drawing.Point(424, 14);
-            this.BDcheck.Name = "BDcheck";
-            this.BDcheck.Size = new System.Drawing.Size(110, 23);
-            this.BDcheck.TabIndex = 0;
-            this.BDcheck.Text = "Bình Dương";
-            this.BDcheck.UseVisualStyleBackColor = true;
-            // 
-            // Q2check
-            // 
-            this.Q2check.AutoSize = true;
-            this.Q2check.Location = new System.Drawing.Point(339, 14);
-            this.Q2check.Name = "Q2check";
-            this.Q2check.Size = new System.Drawing.Size(76, 23);
-            this.Q2check.TabIndex = 0;
-            this.Q2check.Text = "Quận 2";
-            this.Q2check.UseVisualStyleBackColor = true;
-            // 
-            // Q9check
-            // 
-            this.Q9check.AutoSize = true;
-            this.Q9check.Location = new System.Drawing.Point(247, 14);
-            this.Q9check.Name = "Q9check";
-            this.Q9check.Size = new System.Drawing.Size(76, 23);
-            this.Q9check.TabIndex = 0;
-            this.Q9check.Text = "Quận 9";
-            this.Q9check.UseVisualStyleBackColor = true;
-            // 
             // TDcheck
             // 
             this.TDcheck.AutoSize = true;
             this.TDcheck.Location = new System.Drawing.Point(141, 14);
             this.TDcheck.Name = "TDcheck";
-            this.TDcheck.Size = new System.Drawing.Size(86, 23);
+            this.TDcheck.Size = new System.Drawing.Size(68, 17);
             this.TDcheck.TabIndex = 0;
             this.TDcheck.Text = "Thủ Đức";
             this.TDcheck.UseVisualStyleBackColor = true;
+            this.TDcheck.CheckedChanged += new System.EventHandler(this.TDcheck_CheckedChanged);
             // 
             // DoiCheck
             // 
@@ -369,43 +409,40 @@
             this.DoiCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DoiCheck.Location = new System.Drawing.Point(11, 14);
             this.DoiCheck.Name = "DoiCheck";
-            this.DoiCheck.Size = new System.Drawing.Size(54, 23);
+            this.DoiCheck.Size = new System.Drawing.Size(42, 17);
             this.DoiCheck.TabIndex = 0;
             this.DoiCheck.Text = "Đội";
             this.DoiCheck.UseVisualStyleBackColor = true;
+            this.DoiCheck.CheckedChanged += new System.EventHandler(this.DoiCheck_CheckedChanged);
             // 
-            // reportViewer1
+            // reportNamLD
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(1108, 546);
-            this.reportViewer1.TabIndex = 0;
+            this.reportNamLD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportNamLD.LocalReport.ReportEmbeddedResource = "CAPNUOCTHUDUC.Forms.DHN.BC.rptThongKeDHNTheoNam.rdlc";
+            this.reportNamLD.Location = new System.Drawing.Point(0, 0);
+            this.reportNamLD.Name = "reportNamLD";
+            this.reportNamLD.Size = new System.Drawing.Size(1108, 546);
+            this.reportNamLD.TabIndex = 2;
+            this.reportNamLD.Visible = false;
             // 
-            // comboBoxEx1
+            // reportQP
             // 
-            this.comboBoxEx1.DisplayMember = "Text";
-            this.comboBoxEx1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxEx1.FormattingEnabled = true;
-            this.comboBoxEx1.ItemHeight = 21;
-            this.comboBoxEx1.Items.AddRange(new object[] {
-            this.comboItem25,
-            this.comboItem26});
-            this.comboBoxEx1.Location = new System.Drawing.Point(11, 44);
-            this.comboBoxEx1.Name = "comboBoxEx1";
-            this.comboBoxEx1.Size = new System.Drawing.Size(216, 27);
-            this.comboBoxEx1.TabIndex = 31;
+            this.reportQP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportQP.LocalReport.ReportEmbeddedResource = "CAPNUOCTHUDUC.Forms.DHN.BC.rptThongKeQPDHN.rdlc";
+            this.reportQP.Location = new System.Drawing.Point(0, 0);
+            this.reportQP.Name = "reportQP";
+            this.reportQP.Size = new System.Drawing.Size(1108, 546);
+            this.reportQP.TabIndex = 1;
+            this.reportQP.Visible = false;
             // 
-            // comboItem25
+            // reportHieuDHN
             // 
-            this.comboItem25.Text = "Theo Hiệu ĐHN";
-            this.comboItem25.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // comboItem26
-            // 
-            this.comboItem26.Text = "Theo Quận -Phường";
-            this.comboItem26.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            this.reportHieuDHN.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportHieuDHN.LocalReport.ReportEmbeddedResource = "CAPNUOCTHUDUC.Forms.DHN.BC.rptThongKeHieuDHN.rdlc";
+            this.reportHieuDHN.Location = new System.Drawing.Point(0, 0);
+            this.reportHieuDHN.Name = "reportHieuDHN";
+            this.reportHieuDHN.Size = new System.Drawing.Size(1108, 546);
+            this.reportHieuDHN.TabIndex = 0;
             // 
             // A_tab_ThongKeDHN
             // 
@@ -465,9 +502,13 @@
         private System.Windows.Forms.CheckBox Q9check;
         private System.Windows.Forms.CheckBox TDcheck;
         private System.Windows.Forms.CheckBox DoiCheck;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx1;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cbLoaiBC;
         private DevComponents.Editors.ComboItem comboItem25;
         private DevComponents.Editors.ComboItem comboItem26;
+        private CAPNUOCTHUDUCDataSet cAPNUOCTHUDUCDataSet;
+        private Microsoft.Reporting.WinForms.ReportViewer reportHieuDHN;
+        private Microsoft.Reporting.WinForms.ReportViewer reportQP;
+        private Microsoft.Reporting.WinForms.ReportViewer reportNamLD;
+        private DevComponents.Editors.ComboItem comboItem27;
     }
 }

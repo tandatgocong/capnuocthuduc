@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using log4net;
 using CAPNUOCTHUDUC.LinQ;
 using CrystalDecisions.CrystalReports.Engine;
+using CAPNUOCTHUDUC.Forms.DHN.BC;
 
 
 namespace CAPNUOCTHUDUC.Forms.DHN
@@ -17,6 +18,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(frm_Option_BT).Name);
         AutoCompleteStringCollection namesCollection = new AutoCompleteStringCollection();
+        string listDanhBo_ = "";
         public frm_Option_BT(string listDanhBo)
         {
             InitializeComponent();
@@ -41,7 +43,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
             sql += "FROM  TB_DULIEUKHACHHANG, TB_HIEUDONGHO WHERE TB_HIEUDONGHO.HIEUDH=LEFT(TB_DULIEUKHACHHANG.HIEUDH,3) AND DANHBO IN (" + listDanhBo + ") ORDER BY LOTRINH ASC ";
 
             dataBangKe.DataSource = DAL.LinQConnection.getDataTable(sql);
-         
+            listDanhBo_ = listDanhBo;
 
 
             DataTable table = DAL.LinQConnection.getDataTable("SELECT TENDONGHO FROM TB_HIEUDONGHO");
@@ -168,23 +170,17 @@ namespace CAPNUOCTHUDUC.Forms.DHN
 
         private void btIn_Click(object sender, EventArgs e)
         {
-            //if ("".Equals(this.txtSoBangKe.Text))
-            //{
-            //    MessageBox.Show(this, "Cần nhập số bảng kê .", "..: Thông Báo :..", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    this.txtSoBangKe.Focus();
-            //}
-            //else
-            //{
-            //    ReportDocument rp = new rpt_BCBangKe_A3();
-            //    if ("A4".Equals(Utilities.Files.pageSize.Trim()))
-            //    {
-            //        rp = new rpt_BCBangKe_A4();
-            //    }    
-            //    rp.SetDataSource(DAL.QLDHN.C_BaoThay.ReportBaoThay(txtSoBangKe.Text));
-            //    rp.SetParameterValue("lapbk", DAL.SYS.C_USERS._fullName);
-            //    frm_Reports frm = new frm_Reports(rp);
-            //    frm.ShowDialog();
-            //}
+            if ("".Equals(this.txtSoBangKe.Text))
+            {
+                MessageBox.Show(this, "Cần nhập số bảng kê .", "..: Thông Báo :..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.txtSoBangKe.Focus();
+            }
+            else
+            {
+
+                frmInBaoThay frm = new frmInBaoThay(listDanhBo_);
+                frm.ShowDialog();
+            }
         }
 
         private void labelX4_Click(object sender, EventArgs e)

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DocSoTD" Class="DocSoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=DocSoTD;User ID=sa" SettingsObjectName="CAPNUOCTHUDUC.Properties.Settings" SettingsPropertyName="DocSoTDConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.B_T" Member="B_Ts">
+    <Type Name="B_T">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Danhba" Type="System.String" DbType="NChar(11)" CanBeNull="true" />
+      <Column Name="Tenkh" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Hieu" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="Co" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SoThan" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="CsBao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Loai" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="Ngaybao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Nhanvien" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="Ngaythay" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="HieuMoi" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="CoMoi" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="SoThanMoi" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Coude" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SoBK" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Csgo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Csgan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CoudeMoi" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NgayCapNhat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MALOTRINH" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="FL" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
