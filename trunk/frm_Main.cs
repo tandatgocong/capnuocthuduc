@@ -21,11 +21,36 @@ namespace CAPNUOCTHUDUC
             Utilities.Files.getFileOnServer();
         }
 
-
+        /// <summary>
+        /// Lay Thong Tin Thay DHN
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void UpdateThayDHN()
+        {
+            string sql = "SELECT Danhba ,Ngaythay ,HieuMoi ,SoThanMoi ,CoMoi,ID  ";
+            sql += " FROM B_T WHERE Ngaythay IS NOT NULL AND (FL IS NULL OR FL=0)";
+            DataTable tbl = DAL.QLDHN.C_DocSoTD.getDataTable(sql);
+            for (int i = 0; i < tbl.Rows.Count; i++)
+            {
+                string ud = " UPDATE TB_DULIEUKHACHHANG SET NGAYTHAY='" + tbl.Rows[i]["Ngaythay"] + "' ,HIEUDH='" + tbl.Rows[i]["HieuMoi"] + "',SOTHANDH='" + tbl.Rows[i]["SoThanMoi"] + "' ,CODH='" + tbl.Rows[i]["CoMoi"] + "',BAOTHAY='0' WHERE DANHBO='" + tbl.Rows[i]["Danhba"] + "' ";
+                log.Info(DAL.LinQConnection.ExecuteCommand_(ud) +"-" + ud);
+              
+                string ds = " UPDATE B_T SET FL=1 WHERE ID='" + tbl.Rows[i]["ID"] + "'";
+                log.Info(DAL.QLDHN.C_DocSoTD.ExecuteCommand_(ds) + "-" + ds);
+            }
+        }
         private void frm_Main_Load(object sender, EventArgs e)
         {
-          
-
+            try
+            {
+                UpdateThayDHN();
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex.Message);
+            }
+            
         }
 
         private void caculator_Click(object sender, EventArgs e)

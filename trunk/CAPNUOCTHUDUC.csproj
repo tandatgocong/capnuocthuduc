@@ -105,17 +105,15 @@
     <Compile Include="DAL\DULIEUKH\C_DuLieuKhachHang.cs" />
     <Compile Include="DAL\LinQConnection.cs" />
     <Compile Include="DAL\QLDHN\C_BaoThay.cs" />
+    <Compile Include="DAL\QLDHN\C_DocSoTD.cs" />
     <Compile Include="DAL\SYS\C_PHUONG.cs" />
     <Compile Include="DAL\SYS\C_QUAN.cs" />
     <Compile Include="DAL\ThaoTac.cs" />
-    <Compile Include="Forms\DHN\BC\THONGKEDHN.cs">
-      <DependentUpon>THONGKEDHN.xsd</DependentUpon>
-      <SubType>Component</SubType>
+    <Compile Include="Forms\DHN\BC\frmInBaoThay.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DHN\BC\THONGKEDHN.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>THONGKEDHN.xsd</DependentUpon>
+    <Compile Include="Forms\DHN\BC\frmInBaoThay.Designer.cs">
+      <DependentUpon>frmInBaoThay.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DHN\frm_BaoCaoTongKet.cs">
       <SubType>UserControl</SubType>
@@ -166,6 +164,11 @@
       <DependentUpon>frm_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="lib\app.Designer.cs" />
+    <Compile Include="LinQ\DocSoTD.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocSoTD.dbml</DependentUpon>
+    </Compile>
     <Compile Include="LinQ\ThuDucData.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -204,23 +207,18 @@
     <None Include="CAPNUOCTHUDUCDataSet.xss">
       <DependentUpon>CAPNUOCTHUDUCDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Forms\DHN\BC\THONGKEDHN.xsc">
-      <DependentUpon>THONGKEDHN.xsd</DependentUpon>
-    </None>
-    <None Include="Forms\DHN\BC\THONGKEDHN.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>THONGKEDHN.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="Forms\DHN\BC\THONGKEDHN.xss">
-      <DependentUpon>THONGKEDHN.xsd</DependentUpon>
-    </None>
     <None Include="lib\app.conf" />
     <None Include="lib\app.settings" />
     <None Include="lib\LOTRINH.xls" />
     <None Include="lib\News.xls" />
     <None Include="lib\user.dat" />
-    <EmbeddedResource Include="Forms\DHN\BC\Report1.rdlc" />
+    <EmbeddedResource Include="Forms\DHN\BC\frmInBaoThay.resx">
+      <DependentUpon>frmInBaoThay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DHN\BC\rptInThayDHN.rdlc" />
+    <EmbeddedResource Include="Forms\DHN\BC\rptThongKeDHNTheoNam.rdlc" />
+    <EmbeddedResource Include="Forms\DHN\BC\rptThongKeQPDHN.rdlc" />
+    <EmbeddedResource Include="Forms\DHN\BC\rptThongKeHieuDHN.rdlc" />
     <EmbeddedResource Include="Forms\DHN\frm_BaoCaoTongKet.resx">
       <DependentUpon>frm_BaoCaoTongKet.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,8 +240,16 @@
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="LinQ\DocSoTD.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DocSoTD.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="LinQ\ThuDucData.dbml.layout">
       <DependentUpon>ThuDucData.dbml</DependentUpon>
+    </None>
+    <None Include="LinQ\DocSoTD.dbml.layout">
+      <DependentUpon>DocSoTD.dbml</DependentUpon>
     </None>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -109,7 +109,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
 
             }
             
-            sql += " ORDER BY  LOTRINH ASC ";
+            sql += " ORDER BY DANHBO  ASC ";
             return sql;
 
         }
@@ -138,7 +138,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
             FirstRow = 0;
             LastRow = 0;
 
-            string sqlCount = Search().Replace("CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY", " COUNT(*) ").Replace("ORDER BY  LOTRINH ASC", " ");
+            string sqlCount = Search().Replace("CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY", " COUNT(*) ").Replace("ORDER BY DANHBO  ASC", " ");
             rows = DAL.LinQConnection.ExecuteCommand(sqlCount);
             lbTongDHN.Text = "Tổng Số " + rows + " ĐHN.";
             try

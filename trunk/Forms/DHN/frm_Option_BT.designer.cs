@@ -113,6 +113,7 @@
             this.txtSoBangKe.Name = "txtSoBangKe";
             this.txtSoBangKe.Size = new System.Drawing.Size(261, 26);
             this.txtSoBangKe.TabIndex = 103;
+            this.txtSoBangKe.Text = "0";
             // 
             // dataBangKe
             // 

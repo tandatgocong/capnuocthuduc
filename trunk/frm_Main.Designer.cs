@@ -73,7 +73,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuKiemTra = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDieuChinhKH = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmdBaoThay = new System.Windows.Forms.ToolStripMenuItem();
             this.btLoTrinh = new System.Windows.Forms.ToolStripMenuItem();
             this.baocaoTongKet = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDoiQLDHN = new DevComponents.DotNetBar.RibbonTabItem();
@@ -515,7 +514,6 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuKiemTra,
             this.menuDieuChinhKH,
-            this.cmdBaoThay,
             this.btLoTrinh,
             this.baocaoTongKet});
             this.menuStrip1.Location = new System.Drawing.Point(3, 0);
@@ -543,21 +541,13 @@
             this.menuDieuChinhKH.Text = "Theo Dõi Thay Định Kỳ";
             this.menuDieuChinhKH.Click += new System.EventHandler(this.menuDieuChinhKH_Click);
             // 
-            // cmdBaoThay
-            // 
-            this.cmdBaoThay.ForeColor = System.Drawing.Color.Black;
-            this.cmdBaoThay.Image = global::CAPNUOCTHUDUC.Properties.Resources.Applications;
-            this.cmdBaoThay.Name = "cmdBaoThay";
-            this.cmdBaoThay.Size = new System.Drawing.Size(166, 23);
-            this.cmdBaoThay.Text = "Số Liệu Thay ĐHN";
-            // 
             // btLoTrinh
             // 
             this.btLoTrinh.ForeColor = System.Drawing.Color.Black;
             this.btLoTrinh.Image = global::CAPNUOCTHUDUC.Properties.Resources.Arrow2_Right1;
             this.btLoTrinh.Name = "btLoTrinh";
-            this.btLoTrinh.Size = new System.Drawing.Size(153, 23);
-            this.btLoTrinh.Text = "Số Liệu Gắn Mới";
+            this.btLoTrinh.Size = new System.Drawing.Size(257, 23);
+            this.btLoTrinh.Text = "Số Liệu Gắn Mới - Hủy Danh Bộ";
             this.btLoTrinh.Click += new System.EventHandler(this.btChuyenBK_Click);
             // 
             // baocaoTongKet
@@ -669,7 +659,6 @@
         private DevComponents.DotNetBar.RibbonTabItem menuDoiQLDHN;
         private System.Windows.Forms.Panel PanelContent;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem cmdBaoThay;
         private System.Windows.Forms.ToolStripMenuItem menuKiemTra;
         private System.Windows.Forms.ToolStripMenuItem baocaoTongKet;
         private System.Windows.Forms.Panel panelHome;
