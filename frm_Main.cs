@@ -121,11 +121,11 @@ namespace CAPNUOCTHUDUC
 
         private void btChuyenBK_Click(object sender, EventArgs e)
         {
-            //PanelContent.Controls.Clear();
-            //frm_LoTrinhDocSo baothay = new frm_LoTrinhDocSo();
-            //baothay.Height = PanelContent.Size.Height - 20;
-            //baothay.Width = PanelContent.Size.Width - 20;
-            //PanelContent.Controls.Add(baothay);
+            PanelContent.Controls.Clear();
+            frm_GanMoi_HuyDB baothay = new frm_GanMoi_HuyDB();
+            baothay.Height = PanelContent.Size.Height - 20;
+            baothay.Width = PanelContent.Size.Width - 20;
+            PanelContent.Controls.Add(baothay);
         }
 
         private void chiso_Click(object sender, EventArgs e)
