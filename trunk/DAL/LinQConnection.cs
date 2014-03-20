@@ -64,7 +64,7 @@ namespace CAPNUOCTHUDUC.DAL
                 db.SubmitChanges();              
                 return result;
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 log.Error("LinQConnection ExecuteCommand_ : " + sql);
 

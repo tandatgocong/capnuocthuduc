@@ -31,6 +31,10 @@ namespace CAPNUOCTHUDUC.Forms.DHN
             HIEUDH.AutoCompleteSource = AutoCompleteSource.CustomSource;
             HIEUDH.AutoCompleteCustomSource = namesCollection;
 
+            cbQuan.DataSource = DAL.LinQConnection.getDataTable("SELECT MAQUAN,TENQUAN FROM TB_QUAN");
+            cbQuan.DisplayMember = "TENQUAN";
+            cbQuan.ValueMember = "MAQUAN";
+
         }
 
         private void txtDanhBo_KeyPress(object sender, KeyPressEventArgs e)
@@ -58,13 +62,15 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                     txtDienThoai.Text = khachhang.DIENTHOAI;
                     try
                     {
-                        LinQ.TB_QUAN q = DAL.SYS.C_Quan.finByMaQuan(khachhang.QUAN);
-                        if (q != null)
-                        {
-                            QUAN.Text = q.TENQUAN;
-                            LinQ.TB_PHUONG ph = DAL.SYS.C_Phuong.finbyPhuong(q.MAQUAN, khachhang.PHUONG.Trim());
-                            PHUONGT.Text = ph.TENPHUONG;
-                        }
+                        //LinQ.TB_QUAN q = DAL.SYS.C_Quan.finByMaQuan(khachhang.QUAN);
+                        //if (q != null)
+                        //{
+                        //    QUAN.Text = q.TENQUAN;
+                        //    LinQ.TB_PHUONG ph = DAL.SYS.C_Phuong.finbyPhuong(q.MAQUAN, khachhang.PHUONG.Trim());
+                        //    PHUONGT.Text = ph.TENPHUONG;
+                        //}
+                        cbQuan.SelectedValue = khachhang.QUAN;
+                        cbPhuong.SelectedValue = khachhang.PHUONG;
                     }
                     catch (Exception)
                     {
@@ -101,13 +107,15 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                         TENDUONG.Text = khachhanghuy.TENDUONG;
                         try
                         {
-                            LinQ.TB_QUAN q = DAL.SYS.C_Quan.finByMaQuan(khachhanghuy.QUAN);
-                            if (q != null)
-                            {
-                                QUAN.Text = q.TENQUAN;
-                                LinQ.TB_PHUONG ph = DAL.SYS.C_Phuong.finbyPhuong(q.MAQUAN, khachhanghuy.PHUONG.Trim());
-                                PHUONGT.Text = ph.TENPHUONG;
-                            }
+                            //LinQ.TB_QUAN q = DAL.SYS.C_Quan.finByMaQuan(khachhanghuy.QUAN);
+                            //if (q != null)
+                            //{
+                            //    QUAN.Text = q.TENQUAN;
+                            //    LinQ.TB_PHUONG ph = DAL.SYS.C_Phuong.finbyPhuong(q.MAQUAN, khachhanghuy.PHUONG.Trim());
+                            //    PHUONGT.Text = ph.TENPHUONG;
+                            //}
+                            cbQuan.SelectedValue = khachhanghuy.QUAN;
+                            cbPhuong.SelectedValue = khachhanghuy.PHUONG;
                         }
                         catch (Exception)
                         {
@@ -159,8 +167,8 @@ namespace CAPNUOCTHUDUC.Forms.DHN
             HOTEN.Text = "";
             SONHA.Text = "";
             TENDUONG.Text = "";
-            QUAN.Text = "";           
-            PHUONGT.Text = "";
+            //QUAN.Text = "";           
+            //PHUONGT.Text = "";
             GIABIEU.Text = "";
             DINHMUC.Text = "";
             NGAYGAN.ValueObject = DateTime.Now.Date;
@@ -197,6 +205,8 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                 khachhang.GIABIEU = GIABIEU.Text;
                 khachhang.DINHMUC = DINHMUC.Text;
                 khachhang.CODH = CO.Text;
+                khachhang.QUAN = cbQuan.SelectedValue+"";
+                khachhang.PHUONG = cbPhuong.SelectedValue + "";
                 khachhang.CAP = CAP.Text;
                 khachhang.SOTHANDH = SOTHAN.Text;
                 khachhang.VITRIDHN = VITRI.Text;
@@ -261,6 +271,20 @@ namespace CAPNUOCTHUDUC.Forms.DHN
             //    string sodanhbo = this.txtDanhBo.Text.Replace("-", "");
             //    loadghichu(sodanhbo);
             //}
+        }
+
+        private void cbQuan_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                cbPhuong.DataSource = DAL.LinQConnection.getDataTable("SELECT MAPHUONG,TENPHUONG FROM TB_PHUONG WHERE MAQUAN='"+cbQuan.SelectedValue.ToString()+"'");
+                cbPhuong.DisplayMember = "TENPHUONG";
+                cbPhuong.ValueMember = "MAPHUONG";
+            }
+            catch (Exception)
+            {
+                
+            }
         }
 
   
