@@ -115,6 +115,12 @@
     <Compile Include="Forms\DHN\BC\frmInBaoThay.Designer.cs">
       <DependentUpon>frmInBaoThay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DHN\BC\frm_HuyDanhBo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DHN\BC\frm_HuyDanhBo.designer.cs">
+      <DependentUpon>frm_HuyDanhBo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DHN\frm_BaoCaoTongKet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,6 +132,12 @@
     </Compile>
     <Compile Include="Forms\DHN\frm_DieuChinhThongTin.designer.cs">
       <DependentUpon>frm_DieuChinhThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DHN\frm_GanMoi_HuyDB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DHN\frm_GanMoi_HuyDB.designer.cs">
+      <DependentUpon>frm_GanMoi_HuyDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DHN\frm_KiemTraThayDinhKy.cs">
       <SubType>UserControl</SubType>
@@ -215,15 +227,22 @@
     <EmbeddedResource Include="Forms\DHN\BC\frmInBaoThay.resx">
       <DependentUpon>frmInBaoThay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DHN\BC\frm_HuyDanhBo.resx">
+      <DependentUpon>frm_HuyDanhBo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DHN\BC\rptInThayDHN.rdlc" />
     <EmbeddedResource Include="Forms\DHN\BC\rptThongKeDHNTheoNam.rdlc" />
     <EmbeddedResource Include="Forms\DHN\BC\rptThongKeQPDHN.rdlc" />
     <EmbeddedResource Include="Forms\DHN\BC\rptThongKeHieuDHN.rdlc" />
+    <EmbeddedResource Include="Forms\DHN\BC\rpt_HuyDanhBo.rdlc" />
     <EmbeddedResource Include="Forms\DHN\frm_BaoCaoTongKet.resx">
       <DependentUpon>frm_BaoCaoTongKet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DHN\frm_DieuChinhThongTin.resx">
       <DependentUpon>frm_DieuChinhThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DHN\frm_GanMoi_HuyDB.resx">
+      <DependentUpon>frm_GanMoi_HuyDB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DHN\frm_KiemTraThayDinhKy.resx">
       <DependentUpon>frm_KiemTraThayDinhKy.cs</DependentUpon>

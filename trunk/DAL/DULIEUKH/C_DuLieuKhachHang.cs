@@ -162,12 +162,12 @@ namespace CAPNUOCTHUDUC.DAL.DULIEUKH
 
             try
             {
-                //db.TB_DULIEUKHACHHANG_HUYDBs.InsertOnSubmit(huy);
-                //db.TB_DULIEUKHACHHANGs.DeleteOnSubmit(kh);               
-                //// huy handheld
-                //LinQConnectionDS.ExecuteCommand("DELETE FROM KHACHHANG WHERE DANHBA='"+ kh.DANHBO +"'");
-                //db.SubmitChanges();
-                ////
+                db.TB_DULIEUKHACHHANG_HUYDBs.InsertOnSubmit(huy);
+                db.TB_DULIEUKHACHHANGs.DeleteOnSubmit(kh);
+                // huy handheld
+              //  LinQConnectionDS.ExecuteCommand("DELETE FROM KHACHHANG WHERE DANHBA='" + kh.DANHBO + "'");
+                db.SubmitChanges();
+                //
 
                 return true;
             }
@@ -181,14 +181,13 @@ namespace CAPNUOCTHUDUC.DAL.DULIEUKH
 
         public static int SoLuongHuy(string tods, string hieulucky) {
 
-            string gioihan = "";
-            string sql = "SELECT COUNT(*) FROM TB_DULIEUKHACHHANG_HUYDB WHERE (TAILAPDB IS NULL OR TAILAPDB='False') AND HIEULUCHUY=N'" + hieulucky + "' " + gioihan;
+            string sql = "SELECT COUNT(*) FROM TB_DULIEUKHACHHANG_HUYDB WHERE LEFT(HOPDONG,2)='" + tods + "' AND (TAILAPDB IS NULL OR TAILAPDB='False') AND HIEULUCHUY=N'" + hieulucky + "' ";
             try
             {
                 return DAL.LinQConnection.ExecuteCommand(sql);
             }
             catch (Exception ex)
-            { log.Error(ex.Message);      }
+            { log.Error(ex.Message); }
             return 0;
          
         }
