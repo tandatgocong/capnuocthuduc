@@ -505,7 +505,6 @@
         private DevComponents.DotNetBar.Controls.ComboBoxEx cbLoaiBC;
         private DevComponents.Editors.ComboItem comboItem25;
         private DevComponents.Editors.ComboItem comboItem26;
-        private CAPNUOCTHUDUCDataSet cAPNUOCTHUDUCDataSet;
         private Microsoft.Reporting.WinForms.ReportViewer reportHieuDHN;
         private Microsoft.Reporting.WinForms.ReportViewer reportQP;
         private Microsoft.Reporting.WinForms.ReportViewer reportNamLD;

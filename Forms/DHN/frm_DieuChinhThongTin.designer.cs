@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lichsuGhiCHu = new System.Windows.Forms.DataGridView();
@@ -53,9 +53,7 @@
             this.txtHieuLuc = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.DOT = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.LOTRINH = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.QUAN = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtDienThoai = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.PHUONGT = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.VITRI = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.CAP = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.CO = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -88,6 +86,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCapNhatKetQua = new System.Windows.Forms.ToolStripMenuItem();
+            this.cbPhuong = new System.Windows.Forms.ComboBox();
+            this.cbQuan = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lichsuGhiCHu)).BeginInit();
@@ -99,6 +99,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.cbQuan);
+            this.panel2.Controls.Add(this.cbPhuong);
             this.panel2.Controls.Add(this.groupBox2);
             this.panel2.Controls.Add(this.txtGhiChu);
             this.panel2.Controls.Add(this.labelX6);
@@ -115,9 +117,7 @@
             this.panel2.Controls.Add(this.txtHieuLuc);
             this.panel2.Controls.Add(this.DOT);
             this.panel2.Controls.Add(this.LOTRINH);
-            this.panel2.Controls.Add(this.QUAN);
             this.panel2.Controls.Add(this.txtDienThoai);
-            this.panel2.Controls.Add(this.PHUONGT);
             this.panel2.Controls.Add(this.VITRI);
             this.panel2.Controls.Add(this.CAP);
             this.panel2.Controls.Add(this.CO);
@@ -191,10 +191,10 @@
             // CREATEDATE
             // 
             this.CREATEDATE.DataPropertyName = "CREATEDATE";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
-            dataGridViewCellStyle1.NullValue = null;
-            this.CREATEDATE.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Format = "dd/MM/yyyy";
+            dataGridViewCellStyle7.NullValue = null;
+            this.CREATEDATE.DefaultCellStyle = dataGridViewCellStyle7;
             this.CREATEDATE.HeaderText = "NGÀY";
             this.CREATEDATE.Name = "CREATEDATE";
             // 
@@ -208,8 +208,8 @@
             // DONVICN
             // 
             this.DONVICN.DataPropertyName = "DONVI";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DONVICN.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DONVICN.DefaultCellStyle = dataGridViewCellStyle8;
             this.DONVICN.HeaderText = "ĐƠN VỊ";
             this.DONVICN.Name = "DONVICN";
             // 
@@ -484,21 +484,6 @@
             this.LOTRINH.TabIndex = 2;
             this.LOTRINH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // QUAN
-            // 
-            // 
-            // 
-            // 
-            this.QUAN.Border.Class = "TextBoxBorder";
-            this.QUAN.Enabled = false;
-            this.QUAN.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QUAN.ForeColor = System.Drawing.Color.Red;
-            this.QUAN.Location = new System.Drawing.Point(364, 189);
-            this.QUAN.Name = "QUAN";
-            this.QUAN.Size = new System.Drawing.Size(144, 27);
-            this.QUAN.TabIndex = 9;
-            this.QUAN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // txtDienThoai
             // 
             // 
@@ -512,21 +497,6 @@
             this.txtDienThoai.Size = new System.Drawing.Size(144, 27);
             this.txtDienThoai.TabIndex = 10;
             this.txtDienThoai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // PHUONGT
-            // 
-            // 
-            // 
-            // 
-            this.PHUONGT.Border.Class = "TextBoxBorder";
-            this.PHUONGT.Enabled = false;
-            this.PHUONGT.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PHUONGT.ForeColor = System.Drawing.Color.Red;
-            this.PHUONGT.Location = new System.Drawing.Point(151, 187);
-            this.PHUONGT.Name = "PHUONGT";
-            this.PHUONGT.Size = new System.Drawing.Size(144, 27);
-            this.PHUONGT.TabIndex = 8;
-            this.PHUONGT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // VITRI
             // 
@@ -815,7 +785,7 @@
             // labelX13
             // 
             this.labelX13.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelX13.Location = new System.Drawing.Point(304, 191);
+            this.labelX13.Location = new System.Drawing.Point(330, 190);
             this.labelX13.Name = "labelX13";
             this.labelX13.Size = new System.Drawing.Size(85, 22);
             this.labelX13.TabIndex = 125;
@@ -853,6 +823,23 @@
             this.menuCapNhatKetQua.Size = new System.Drawing.Size(199, 24);
             this.menuCapNhatKetQua.Text = "Xóa";
             this.menuCapNhatKetQua.Click += new System.EventHandler(this.menuCapNhatKetQua_Click);
+            // 
+            // cbPhuong
+            // 
+            this.cbPhuong.FormattingEnabled = true;
+            this.cbPhuong.Location = new System.Drawing.Point(151, 188);
+            this.cbPhuong.Name = "cbPhuong";
+            this.cbPhuong.Size = new System.Drawing.Size(173, 27);
+            this.cbPhuong.TabIndex = 128;
+            // 
+            // cbQuan
+            // 
+            this.cbQuan.FormattingEnabled = true;
+            this.cbQuan.Location = new System.Drawing.Point(380, 188);
+            this.cbQuan.Name = "cbQuan";
+            this.cbQuan.Size = new System.Drawing.Size(128, 27);
+            this.cbQuan.TabIndex = 129;
+            this.cbQuan.SelectedValueChanged += new System.EventHandler(this.cbQuan_SelectedValueChanged);
             // 
             // frm_DieuChinhThongTin
             // 
@@ -895,8 +882,6 @@
         private DevComponents.DotNetBar.LabelX labelX13;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.Editors.DateTimeAdv.DateTimeInput KIEMDINH;
-        private DevComponents.DotNetBar.Controls.TextBoxX QUAN;
-        private DevComponents.DotNetBar.Controls.TextBoxX PHUONGT;
         private DevComponents.DotNetBar.Controls.TextBoxX SOTHAN;
         private DevComponents.DotNetBar.Controls.TextBoxX VITRI;
         private DevComponents.DotNetBar.Controls.TextBoxX CO;
@@ -934,6 +919,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private DevComponents.DotNetBar.LabelX labelX39;
         private DevComponents.DotNetBar.Controls.TextBoxX txtDienThoai;
+        private System.Windows.Forms.ComboBox cbQuan;
+        private System.Windows.Forms.ComboBox cbPhuong;
 
     }
 }

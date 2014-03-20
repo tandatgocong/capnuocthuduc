@@ -68,16 +68,18 @@ namespace CAPNUOCTHUDUC.DAL.DULIEUKH
             return null;
         }
 
-        public static void Insert(TB_DULIEUKHACHHANG tb) {
+        public static int Insert(TB_DULIEUKHACHHANG tb) {
             try
             {
                 db.TB_DULIEUKHACHHANGs.InsertOnSubmit(tb);
                 db.SubmitChanges();
+                return 1;
             }
             catch (Exception ex)
             {
                 log.Error(ex.Message);
             }
+            return 0;
         }
         
         public static List<TB_DULIEUKHACHHANG> getAllKHACHHANG()
