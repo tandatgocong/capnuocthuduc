@@ -20,19 +20,19 @@ namespace CAPNUOCTHUDUC.DAL
             result = " AND (";
             if (td.Checked)
             {
-                result += " OR (LEFT(HOPDONG,2)='TD') ";
+                result += " OR (QUAN='26') ";
             }
             if (q9.Checked)
             {
-                result += " OR (LEFT(HOPDONG,2)='Q9') ";
+                result += " OR (QUAN='09') ";
             }
             if (q2.Checked)
             {
-                result += " OR (LEFT(HOPDONG,2)='Q2') ";
+                result += " OR (QUAN='02') ";
             }
             if (bd.Checked)
             {
-                result += " OR (LEFT(HOPDONG,2)='BD') ";
+                result += " OR (QUAN='21') ";
             }
 
             result += " )";

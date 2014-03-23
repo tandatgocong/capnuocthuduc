@@ -163,6 +163,12 @@
     <Compile Include="Forms\DHN\Tab\A_tab_ThongKeDHN.designer.cs">
       <DependentUpon>A_tab_ThongKeDHN.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DHN\Tab\A_tab_ThongKeDHN_GM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DHN\Tab\A_tab_ThongKeDHN_GM.designer.cs">
+      <DependentUpon>A_tab_ThongKeDHN_GM.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DHN\UserControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     <None Include="lib\LOTRINH.xls" />
     <None Include="lib\News.xls" />
     <None Include="lib\user.dat" />
+    <EmbeddedResource Include="Forms\DHN\BC\rptDanhSachGanMoi.rdlc" />
+    <EmbeddedResource Include="Forms\DHN\BC\rptDanhSachGanMoi_.rdlc" />
+    <EmbeddedResource Include="Forms\DHN\BC\rptThongKeDHNTheoDot.rdlc" />
     <EmbeddedResource Include="Forms\DHN\BC\frmInBaoThay.resx">
       <DependentUpon>frmInBaoThay.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DHN\Tab\A_tab_ThongKeDHN.resx">
       <DependentUpon>A_tab_ThongKeDHN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DHN\Tab\A_tab_ThongKeDHN_GM.resx">
+      <DependentUpon>A_tab_ThongKeDHN_GM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>

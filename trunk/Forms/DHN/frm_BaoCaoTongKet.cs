@@ -30,5 +30,11 @@ namespace CAPNUOCTHUDUC.Forms.DHN
             this.splitContainer1.Panel2.Controls.Clear();
             this.splitContainer1.Panel2.Controls.Add(new A_tab_ThongKeDHN());
         }
+
+        private void rptGanMoi_CheckedChanged(object sender, EventArgs e)
+        {
+            this.splitContainer1.Panel2.Controls.Clear();
+            this.splitContainer1.Panel2.Controls.Add(new A_tab_ThongKeDHN_GM());
+        }
     }
 }

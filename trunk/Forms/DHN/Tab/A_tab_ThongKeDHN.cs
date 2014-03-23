@@ -38,7 +38,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 reportQP.Visible = false;
                 reportNamLD.Visible = false;
 
-                sql = "SELECT LEFT(HIEUDH,3) AS HIEU, ";
+                sql = "SELECT h.TENDONGHO AS HIEU, ";
                 sql += " COUNT(CASE WHEN CODH=15 THEN 1 ELSE NULL END) AS CO15, ";
                 sql += " COUNT(CASE WHEN CODH=20 THEN 1 ELSE NULL END) AS CO20,";
                 sql += " COUNT(CASE WHEN CODH=25 THEN 1 ELSE NULL END) AS CO25,";
@@ -52,9 +52,9 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 sql += " COUNT(CASE WHEN CODH=200 THEN 1 ELSE NULL END) AS CO200,";
                 sql += " COUNT(CASE WHEN CODH=300 THEN 1 ELSE NULL END) AS CO300,";
                 sql += " COUNT(CASE WHEN CODH=400 THEN 1 ELSE NULL END) AS CO400 ";
-                sql += " FROM dbo.TB_DULIEUKHACHHANG kh  ";
-                sql += " WHERE kh.NAM<=" + nam + " AND kh.KY_<=" + ky + quanphuong;
-                sql += " GROUP BY  LEFT(HIEUDH,3)";
+                sql += " FROM dbo.TB_DULIEUKHACHHANG kh ,TB_HIEUDONGHO h  ";
+                sql += " WHERE LEFT(kh.HIEUDH,3)=h.HIEUDH AND kh.NAM<=" + nam + " AND kh.KY_<=" + ky + quanphuong;
+                sql += " GROUP BY  h.TENDONGHO";
                 DataTable bang = DAL.LinQConnection.getDataTable(sql);
                 this.reportHieuDHN.LocalReport.DataSources.Clear();
                
