@@ -42,12 +42,6 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.cbNamLD = new System.Windows.Forms.ComboBox();
             this.nldCheck = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.BDcheck = new System.Windows.Forms.CheckBox();
-            this.Q2check = new System.Windows.Forms.CheckBox();
-            this.Q9check = new System.Windows.Forms.CheckBox();
-            this.TDcheck = new System.Windows.Forms.CheckBox();
-            this.DoiCheck = new System.Windows.Forms.CheckBox();
             this.cbDot = new System.Windows.Forms.ComboBox();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.lbTongDHN = new DevComponents.DotNetBar.LabelX();
@@ -61,7 +55,15 @@
             this.checHieu = new System.Windows.Forms.CheckBox();
             this.ckNgayThay = new System.Windows.Forms.CheckBox();
             this.lbPaing = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BDcheck = new System.Windows.Forms.CheckBox();
+            this.Q2check = new System.Windows.Forms.CheckBox();
+            this.Q9check = new System.Windows.Forms.CheckBox();
+            this.TDcheck = new System.Windows.Forms.CheckBox();
+            this.DoiCheck = new System.Windows.Forms.CheckBox();
             this.dataGrid = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.dafaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.checkChon = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.DOT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,15 +77,13 @@
             this.SOTHAN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CODHN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BAOTHAY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.dafaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.next)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTime)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -105,7 +105,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.next);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox2);
             this.splitContainer1.Panel1.Controls.Add(this.labelX1);
-            this.splitContainer1.Panel1.Controls.Add(this.btXemThongTin);
             this.splitContainer1.Panel1.Controls.Add(this.cbHieuDongHo);
             this.splitContainer1.Panel1.Controls.Add(this.dateTime);
             this.splitContainer1.Panel1.Controls.Add(this.cbCoDH);
@@ -127,7 +126,7 @@
             this.cbNamLD.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNamLD.DropDownWidth = 130;
             this.cbNamLD.FormattingEnabled = true;
-            this.cbNamLD.Location = new System.Drawing.Point(462, 90);
+            this.cbNamLD.Location = new System.Drawing.Point(431, 90);
             this.cbNamLD.Name = "cbNamLD";
             this.cbNamLD.Size = new System.Drawing.Size(118, 27);
             this.cbNamLD.TabIndex = 717;
@@ -135,83 +134,12 @@
             // nldCheck
             // 
             this.nldCheck.AutoSize = true;
-            this.nldCheck.Location = new System.Drawing.Point(462, 64);
+            this.nldCheck.Location = new System.Drawing.Point(431, 64);
             this.nldCheck.Name = "nldCheck";
             this.nldCheck.Size = new System.Drawing.Size(117, 23);
             this.nldCheck.TabIndex = 716;
             this.nldCheck.Text = "Năm Lắp Đặt";
             this.nldCheck.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.BDcheck);
-            this.groupBox1.Controls.Add(this.Q2check);
-            this.groupBox1.Controls.Add(this.Q9check);
-            this.groupBox1.Controls.Add(this.TDcheck);
-            this.groupBox1.Controls.Add(this.DoiCheck);
-            this.groupBox1.Location = new System.Drawing.Point(3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1235, 127);
-            this.groupBox1.TabIndex = 714;
-            this.groupBox1.TabStop = false;
-            // 
-            // BDcheck
-            // 
-            this.BDcheck.AutoSize = true;
-            this.BDcheck.Location = new System.Drawing.Point(424, 17);
-            this.BDcheck.Name = "BDcheck";
-            this.BDcheck.Size = new System.Drawing.Size(110, 23);
-            this.BDcheck.TabIndex = 0;
-            this.BDcheck.Text = "Bình Dương";
-            this.BDcheck.UseVisualStyleBackColor = true;
-            this.BDcheck.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
-            // 
-            // Q2check
-            // 
-            this.Q2check.AutoSize = true;
-            this.Q2check.Location = new System.Drawing.Point(339, 17);
-            this.Q2check.Name = "Q2check";
-            this.Q2check.Size = new System.Drawing.Size(76, 23);
-            this.Q2check.TabIndex = 0;
-            this.Q2check.Text = "Quận 2";
-            this.Q2check.UseVisualStyleBackColor = true;
-            this.Q2check.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
-            // 
-            // Q9check
-            // 
-            this.Q9check.AutoSize = true;
-            this.Q9check.Location = new System.Drawing.Point(247, 17);
-            this.Q9check.Name = "Q9check";
-            this.Q9check.Size = new System.Drawing.Size(76, 23);
-            this.Q9check.TabIndex = 0;
-            this.Q9check.Text = "Quận 9";
-            this.Q9check.UseVisualStyleBackColor = true;
-            this.Q9check.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
-            // 
-            // TDcheck
-            // 
-            this.TDcheck.AutoSize = true;
-            this.TDcheck.Location = new System.Drawing.Point(141, 17);
-            this.TDcheck.Name = "TDcheck";
-            this.TDcheck.Size = new System.Drawing.Size(86, 23);
-            this.TDcheck.TabIndex = 0;
-            this.TDcheck.Text = "Thủ Đức";
-            this.TDcheck.UseVisualStyleBackColor = true;
-            this.TDcheck.CheckedChanged += new System.EventHandler(this.TDcheck_CheckedChanged);
-            this.TDcheck.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
-            // 
-            // DoiCheck
-            // 
-            this.DoiCheck.AutoSize = true;
-            this.DoiCheck.Checked = true;
-            this.DoiCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.DoiCheck.Location = new System.Drawing.Point(11, 17);
-            this.DoiCheck.Name = "DoiCheck";
-            this.DoiCheck.Size = new System.Drawing.Size(54, 23);
-            this.DoiCheck.TabIndex = 0;
-            this.DoiCheck.Text = "Đội";
-            this.DoiCheck.UseVisualStyleBackColor = true;
-            this.DoiCheck.CheckedChanged += new System.EventHandler(this.DoiCheck_CheckedChanged);
             // 
             // cbDot
             // 
@@ -239,7 +167,7 @@
             "18",
             "19",
             "20"});
-            this.cbDot.Location = new System.Drawing.Point(609, 90);
+            this.cbDot.Location = new System.Drawing.Point(561, 90);
             this.cbDot.Name = "cbDot";
             this.cbDot.Size = new System.Drawing.Size(68, 27);
             this.cbDot.TabIndex = 710;
@@ -249,7 +177,7 @@
             this.labelX2.BackColor = System.Drawing.Color.Transparent;
             this.labelX2.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelX2.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.labelX2.Location = new System.Drawing.Point(618, 65);
+            this.labelX2.Location = new System.Drawing.Point(570, 65);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(48, 22);
             this.labelX2.TabIndex = 709;
@@ -260,9 +188,9 @@
             this.lbTongDHN.BackColor = System.Drawing.Color.Transparent;
             this.lbTongDHN.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTongDHN.ForeColor = System.Drawing.Color.Red;
-            this.lbTongDHN.Location = new System.Drawing.Point(1001, 97);
+            this.lbTongDHN.Location = new System.Drawing.Point(1039, 97);
             this.lbTongDHN.Name = "lbTongDHN";
-            this.lbTongDHN.Size = new System.Drawing.Size(223, 19);
+            this.lbTongDHN.Size = new System.Drawing.Size(185, 19);
             this.lbTongDHN.TabIndex = 1;
             // 
             // next
@@ -306,9 +234,9 @@
             this.btXemThongTin.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btXemThongTin.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXemThongTin.ForeColor = System.Drawing.Color.Crimson;
-            this.btXemThongTin.Location = new System.Drawing.Point(702, 93);
+            this.btXemThongTin.Location = new System.Drawing.Point(713, 89);
             this.btXemThongTin.Name = "btXemThongTin";
-            this.btXemThongTin.Size = new System.Drawing.Size(157, 27);
+            this.btXemThongTin.Size = new System.Drawing.Size(157, 24);
             this.btXemThongTin.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
             this.btXemThongTin.TabIndex = 103;
             this.btXemThongTin.Text = "XEM THÔNG TIN";
@@ -319,7 +247,7 @@
             this.cbHieuDongHo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHieuDongHo.DropDownWidth = 130;
             this.cbHieuDongHo.FormattingEnabled = true;
-            this.cbHieuDongHo.Location = new System.Drawing.Point(310, 90);
+            this.cbHieuDongHo.Location = new System.Drawing.Point(294, 90);
             this.cbHieuDongHo.Name = "cbHieuDongHo";
             this.cbHieuDongHo.Size = new System.Drawing.Size(118, 27);
             this.cbHieuDongHo.TabIndex = 8;
@@ -392,7 +320,7 @@
             // checHieu
             // 
             this.checHieu.AutoSize = true;
-            this.checHieu.Location = new System.Drawing.Point(310, 64);
+            this.checHieu.Location = new System.Drawing.Point(294, 64);
             this.checHieu.Name = "checHieu";
             this.checHieu.Size = new System.Drawing.Size(127, 23);
             this.checHieu.TabIndex = 5;
@@ -406,7 +334,7 @@
             this.ckNgayThay.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckNgayThay.Location = new System.Drawing.Point(128, 64);
             this.ckNgayThay.Name = "ckNgayThay";
-            this.ckNgayThay.Size = new System.Drawing.Size(160, 23);
+            this.ckNgayThay.Size = new System.Drawing.Size(161, 23);
             this.ckNgayThay.TabIndex = 5;
             this.ckNgayThay.Text = "Ngày Thay Định Kỳ";
             this.ckNgayThay.UseVisualStyleBackColor = true;
@@ -421,6 +349,78 @@
             this.lbPaing.TabIndex = 708;
             this.lbPaing.Text = "00/00";
             this.lbPaing.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.BDcheck);
+            this.groupBox1.Controls.Add(this.Q2check);
+            this.groupBox1.Controls.Add(this.Q9check);
+            this.groupBox1.Controls.Add(this.TDcheck);
+            this.groupBox1.Controls.Add(this.DoiCheck);
+            this.groupBox1.Controls.Add(this.btXemThongTin);
+            this.groupBox1.Location = new System.Drawing.Point(3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1235, 127);
+            this.groupBox1.TabIndex = 714;
+            this.groupBox1.TabStop = false;
+            // 
+            // BDcheck
+            // 
+            this.BDcheck.AutoSize = true;
+            this.BDcheck.Location = new System.Drawing.Point(424, 17);
+            this.BDcheck.Name = "BDcheck";
+            this.BDcheck.Size = new System.Drawing.Size(110, 23);
+            this.BDcheck.TabIndex = 0;
+            this.BDcheck.Text = "Bình Dương";
+            this.BDcheck.UseVisualStyleBackColor = true;
+            this.BDcheck.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
+            // 
+            // Q2check
+            // 
+            this.Q2check.AutoSize = true;
+            this.Q2check.Location = new System.Drawing.Point(339, 17);
+            this.Q2check.Name = "Q2check";
+            this.Q2check.Size = new System.Drawing.Size(76, 23);
+            this.Q2check.TabIndex = 0;
+            this.Q2check.Text = "Quận 2";
+            this.Q2check.UseVisualStyleBackColor = true;
+            this.Q2check.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
+            // 
+            // Q9check
+            // 
+            this.Q9check.AutoSize = true;
+            this.Q9check.Location = new System.Drawing.Point(247, 17);
+            this.Q9check.Name = "Q9check";
+            this.Q9check.Size = new System.Drawing.Size(76, 23);
+            this.Q9check.TabIndex = 0;
+            this.Q9check.Text = "Quận 9";
+            this.Q9check.UseVisualStyleBackColor = true;
+            this.Q9check.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
+            // 
+            // TDcheck
+            // 
+            this.TDcheck.AutoSize = true;
+            this.TDcheck.Location = new System.Drawing.Point(141, 17);
+            this.TDcheck.Name = "TDcheck";
+            this.TDcheck.Size = new System.Drawing.Size(86, 23);
+            this.TDcheck.TabIndex = 0;
+            this.TDcheck.Text = "Thủ Đức";
+            this.TDcheck.UseVisualStyleBackColor = true;
+            this.TDcheck.CheckedChanged += new System.EventHandler(this.TDcheck_CheckedChanged);
+            this.TDcheck.CheckStateChanged += new System.EventHandler(this.BDcheck_CheckStateChanged);
+            // 
+            // DoiCheck
+            // 
+            this.DoiCheck.AutoSize = true;
+            this.DoiCheck.Checked = true;
+            this.DoiCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.DoiCheck.Location = new System.Drawing.Point(11, 17);
+            this.DoiCheck.Name = "DoiCheck";
+            this.DoiCheck.Size = new System.Drawing.Size(54, 23);
+            this.DoiCheck.TabIndex = 0;
+            this.DoiCheck.Text = "Đội";
+            this.DoiCheck.UseVisualStyleBackColor = true;
+            this.DoiCheck.CheckedChanged += new System.EventHandler(this.DoiCheck_CheckedChanged);
             // 
             // dataGrid
             // 
@@ -461,6 +461,23 @@
             this.dataGrid.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGrid_ColumnHeaderMouseClick);
             this.dataGrid.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataGrid_MouseClick);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dafaToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(169, 26);
+            // 
+            // dafaToolStripMenuItem
+            // 
+            this.dafaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dafaToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.dafaToolStripMenuItem.Image = global::CAPNUOCTHUDUC.Properties.Resources.Plus;
+            this.dafaToolStripMenuItem.Name = "dafaToolStripMenuItem";
+            this.dafaToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.dafaToolStripMenuItem.Text = "Tạo Mới Bảng Kê";
+            this.dafaToolStripMenuItem.Click += new System.EventHandler(this.dafaToolStripMenuItem_Click);
+            // 
             // checkChon
             // 
             this.checkChon.Frozen = true;
@@ -484,6 +501,7 @@
             this.CODE.DefaultCellStyle = dataGridViewCellStyle3;
             this.CODE.HeaderText = "CODE";
             this.CODE.Name = "CODE";
+            this.CODE.Visible = false;
             this.CODE.Width = 50;
             // 
             // CHISOKYTRUOC
@@ -493,6 +511,7 @@
             this.CHISOKYTRUOC.DefaultCellStyle = dataGridViewCellStyle4;
             this.CHISOKYTRUOC.HeaderText = "CHỈ SỐ";
             this.CHISOKYTRUOC.Name = "CHISOKYTRUOC";
+            this.CHISOKYTRUOC.Visible = false;
             this.CHISOKYTRUOC.Width = 90;
             // 
             // G_DANHBO
@@ -570,23 +589,6 @@
             this.BAOTHAY.Name = "BAOTHAY";
             this.BAOTHAY.Width = 300;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dafaToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(169, 26);
-            // 
-            // dafaToolStripMenuItem
-            // 
-            this.dafaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dafaToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
-            this.dafaToolStripMenuItem.Image = global::CAPNUOCTHUDUC.Properties.Resources.Plus;
-            this.dafaToolStripMenuItem.Name = "dafaToolStripMenuItem";
-            this.dafaToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.dafaToolStripMenuItem.Text = "Tạo Mới Bảng Kê";
-            this.dafaToolStripMenuItem.Click += new System.EventHandler(this.dafaToolStripMenuItem_Click);
-            // 
             // frm_KiemTraThayDinhKy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -601,11 +603,11 @@
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.next)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTime)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -631,6 +633,14 @@
         private DevComponents.DotNetBar.LabelX lbTongDHN;
         private System.Windows.Forms.ComboBox cbDot;
         private DevComponents.DotNetBar.LabelX labelX2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox BDcheck;
+        private System.Windows.Forms.CheckBox Q2check;
+        private System.Windows.Forms.CheckBox Q9check;
+        private System.Windows.Forms.CheckBox TDcheck;
+        private System.Windows.Forms.CheckBox DoiCheck;
+        private System.Windows.Forms.ComboBox cbNamLD;
+        private System.Windows.Forms.CheckBox nldCheck;
         private System.Windows.Forms.DataGridViewCheckBoxColumn checkChon;
         private System.Windows.Forms.DataGridViewTextBoxColumn DOT;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODE;
@@ -644,13 +654,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SOTHAN;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODHN;
         private System.Windows.Forms.DataGridViewTextBoxColumn BAOTHAY;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox BDcheck;
-        private System.Windows.Forms.CheckBox Q2check;
-        private System.Windows.Forms.CheckBox Q9check;
-        private System.Windows.Forms.CheckBox TDcheck;
-        private System.Windows.Forms.CheckBox DoiCheck;
-        private System.Windows.Forms.ComboBox cbNamLD;
-        private System.Windows.Forms.CheckBox nldCheck;
     }
 }

@@ -48,6 +48,7 @@
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmInBaoThay";
             this.Text = "In Báo Thay";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmInBaoThay_Load);
             this.ResumeLayout(false);
 

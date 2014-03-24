@@ -180,5 +180,17 @@ namespace CAPNUOCTHUDUC
             baothay.Width = PanelContent.Size.Width - 5;
             PanelContent.Controls.Add(baothay);
         }
+
+        private void toolBaoThay_Click(object sender, EventArgs e)
+        {
+            PanelContent.Controls.Clear();
+            // frm_LayDuLieuGanMoi_Ky baothay = new frm_LayDuLieuGanMoi_Ky();
+            frm_BaoThayDHN baothay = new frm_BaoThayDHN();
+            //baothay.Height = PanelContent.Size.Height - 20;
+            //baothay.Width = PanelContent.Size.Width - 20;
+            baothay.Height = PanelContent.Size.Height - 5;
+            baothay.Width = PanelContent.Size.Width - 5;
+            PanelContent.Controls.Add(baothay);
+        }
     }
 }

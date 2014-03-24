@@ -75,6 +75,7 @@
             this.menuDieuChinhKH = new System.Windows.Forms.ToolStripMenuItem();
             this.btLoTrinh = new System.Windows.Forms.ToolStripMenuItem();
             this.baocaoTongKet = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolBaoThay = new System.Windows.Forms.ToolStripMenuItem();
             this.menuDoiQLDHN = new DevComponents.DotNetBar.RibbonTabItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.miniToolStrip = new System.Windows.Forms.StatusStrip();
@@ -514,6 +515,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuKiemTra,
             this.menuDieuChinhKH,
+            this.toolBaoThay,
             this.btLoTrinh,
             this.baocaoTongKet});
             this.menuStrip1.Location = new System.Drawing.Point(3, 0);
@@ -546,8 +548,8 @@
             this.btLoTrinh.ForeColor = System.Drawing.Color.Black;
             this.btLoTrinh.Image = global::CAPNUOCTHUDUC.Properties.Resources.Arrow2_Right1;
             this.btLoTrinh.Name = "btLoTrinh";
-            this.btLoTrinh.Size = new System.Drawing.Size(257, 23);
-            this.btLoTrinh.Text = "Số Liệu Gắn Mới - Hủy Danh Bộ";
+            this.btLoTrinh.Size = new System.Drawing.Size(202, 23);
+            this.btLoTrinh.Text = "Gắn Mới - Hủy Danh Bộ";
             this.btLoTrinh.Click += new System.EventHandler(this.btChuyenBK_Click);
             // 
             // baocaoTongKet
@@ -555,9 +557,18 @@
             this.baocaoTongKet.ForeColor = System.Drawing.Color.Black;
             this.baocaoTongKet.Image = global::CAPNUOCTHUDUC.Properties.Resources.Stats2;
             this.baocaoTongKet.Name = "baocaoTongKet";
-            this.baocaoTongKet.Size = new System.Drawing.Size(165, 23);
+            this.baocaoTongKet.Size = new System.Drawing.Size(164, 23);
             this.baocaoTongKet.Text = "Báo Cáo Thống Kê";
             this.baocaoTongKet.Click += new System.EventHandler(this.baocaoTongKet_Click);
+            // 
+            // toolBaoThay
+            // 
+            this.toolBaoThay.ForeColor = System.Drawing.Color.Black;
+            this.toolBaoThay.Image = global::CAPNUOCTHUDUC.Properties.Resources.Write3;
+            this.toolBaoThay.Name = "toolBaoThay";
+            this.toolBaoThay.Size = new System.Drawing.Size(142, 23);
+            this.toolBaoThay.Text = "Báo Thay ĐHN";
+            this.toolBaoThay.Click += new System.EventHandler(this.toolBaoThay_Click);
             // 
             // menuDoiQLDHN
             // 
@@ -674,6 +685,7 @@
         private System.Windows.Forms.ToolStripMenuItem btLoTrinh;
         private System.Windows.Forms.ToolStripMenuItem menuDieuChinhKH;
         private System.Windows.Forms.ToolStripMenuItem menuDieuChinhThongSo;
+        private System.Windows.Forms.ToolStripMenuItem toolBaoThay;
 
 
     }
