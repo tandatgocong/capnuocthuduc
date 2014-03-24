@@ -29,7 +29,8 @@ namespace CAPNUOCTHUDUC.DAL.QLDHN
        
 
         public static int getMaxBangKe() {
-            return 0;
+            string sql = "SELECT MAX(DHN_SOBANGKE)  FROM TB_THAYDHN ";
+            return LinQConnection.ExecuteCommand(sql);
         }
         public static int getMaxLanThay(string danhbo) {
             return 0;

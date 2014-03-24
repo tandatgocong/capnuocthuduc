@@ -127,6 +127,12 @@
     <Compile Include="Forms\DHN\frm_BaoCaoTongKet.designer.cs">
       <DependentUpon>frm_BaoCaoTongKet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DHN\frm_BaoThayDHN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DHN\frm_BaoThayDHN.Designer.cs">
+      <DependentUpon>frm_BaoThayDHN.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DHN\frm_DieuChinhThongTin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -246,6 +252,9 @@
     <EmbeddedResource Include="Forms\DHN\BC\rpt_HuyDanhBo.rdlc" />
     <EmbeddedResource Include="Forms\DHN\frm_BaoCaoTongKet.resx">
       <DependentUpon>frm_BaoCaoTongKet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DHN\frm_BaoThayDHN.resx">
+      <DependentUpon>frm_BaoThayDHN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DHN\frm_DieuChinhThongTin.resx">
       <DependentUpon>frm_DieuChinhThongTin.cs</DependentUpon>

@@ -178,7 +178,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
             else
             {
 
-                frmInBaoThay frm = new frmInBaoThay(listDanhBo_);
+                frmInBaoThay frm = new frmInBaoThay(listDanhBo_,"");
                 frm.ShowDialog();
             }
         }
