@@ -30,8 +30,9 @@
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
-            this.rtThongKeDHN = new System.Windows.Forms.RadioButton();
             this.rptGanMoi = new System.Windows.Forms.RadioButton();
+            this.rtThongKeDHN = new System.Windows.Forms.RadioButton();
+            this.rptPhanTichDHN = new System.Windows.Forms.RadioButton();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.expandablePanel1.SuspendLayout();
@@ -58,6 +59,7 @@
             // 
             this.expandablePanel1.CanvasColor = System.Drawing.Color.AliceBlue;
             this.expandablePanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.expandablePanel1.Controls.Add(this.rptPhanTichDHN);
             this.expandablePanel1.Controls.Add(this.rptGanMoi);
             this.expandablePanel1.Controls.Add(this.rtThongKeDHN);
             this.expandablePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -82,6 +84,17 @@
             this.expandablePanel1.TitleStyle.GradientAngle = 90;
             this.expandablePanel1.TitleText = "Danh Mục Báo Cáo";
             // 
+            // rptGanMoi
+            // 
+            this.rptGanMoi.AutoSize = true;
+            this.rptGanMoi.Location = new System.Drawing.Point(10, 58);
+            this.rptGanMoi.Name = "rptGanMoi";
+            this.rptGanMoi.Size = new System.Drawing.Size(197, 23);
+            this.rptGanMoi.TabIndex = 2;
+            this.rptGanMoi.Text = "Thống Kê ĐHN Gắn Mới";
+            this.rptGanMoi.UseVisualStyleBackColor = true;
+            this.rptGanMoi.CheckedChanged += new System.EventHandler(this.rptGanMoi_CheckedChanged);
+            // 
             // rtThongKeDHN
             // 
             this.rtThongKeDHN.AutoSize = true;
@@ -90,20 +103,21 @@
             this.rtThongKeDHN.Name = "rtThongKeDHN";
             this.rtThongKeDHN.Size = new System.Drawing.Size(133, 23);
             this.rtThongKeDHN.TabIndex = 1;
+            this.rtThongKeDHN.TabStop = true;
             this.rtThongKeDHN.Text = "Thống Kê ĐHN";
             this.rtThongKeDHN.UseVisualStyleBackColor = true;
             this.rtThongKeDHN.Click += new System.EventHandler(this.rtThongKeDHN_Click);
             // 
-            // rptGanMoi
+            // rptPhanTichDHN
             // 
-            this.rptGanMoi.AutoSize = true;
-            this.rptGanMoi.Location = new System.Drawing.Point(10, 62);
-            this.rptGanMoi.Name = "rptGanMoi";
-            this.rptGanMoi.Size = new System.Drawing.Size(197, 23);
-            this.rptGanMoi.TabIndex = 2;
-            this.rptGanMoi.Text = "Thống Kê ĐHN Gắn Mới";
-            this.rptGanMoi.UseVisualStyleBackColor = true;
-            this.rptGanMoi.CheckedChanged += new System.EventHandler(this.rptGanMoi_CheckedChanged);
+            this.rptPhanTichDHN.AutoSize = true;
+            this.rptPhanTichDHN.Location = new System.Drawing.Point(10, 84);
+            this.rptPhanTichDHN.Name = "rptPhanTichDHN";
+            this.rptPhanTichDHN.Size = new System.Drawing.Size(139, 23);
+            this.rptPhanTichDHN.TabIndex = 3;
+            this.rptPhanTichDHN.Text = "Phân Tích ĐHN ";
+            this.rptPhanTichDHN.UseVisualStyleBackColor = true;
+            this.rptPhanTichDHN.CheckedChanged += new System.EventHandler(this.rptPhanTichDHN_CheckedChanged);
             // 
             // frm_BaoCaoTongKet
             // 
@@ -129,6 +143,7 @@
         private DevComponents.DotNetBar.ExpandablePanel expandablePanel1;
         private System.Windows.Forms.RadioButton rtThongKeDHN;
         private System.Windows.Forms.RadioButton rptGanMoi;
+        private System.Windows.Forms.RadioButton rptPhanTichDHN;
         //<<<<<<< .mine
         //=======
 //>>>>>>> .r275

@@ -151,12 +151,6 @@
     <Compile Include="Forms\DHN\frm_KiemTraThayDinhKy.designer.cs">
       <DependentUpon>frm_KiemTraThayDinhKy.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\DHN\frm_KiemTraThayDinhKy_.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\DHN\frm_KiemTraThayDinhKy_.designer.cs">
-      <DependentUpon>frm_KiemTraThayDinhKy_.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\DHN\frm_Option_BT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +168,12 @@
     </Compile>
     <Compile Include="Forms\DHN\Tab\A_tab_ThongKeDHN_GM.designer.cs">
       <DependentUpon>A_tab_ThongKeDHN_GM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DHN\Tab\A_tab_PhanTichDHN.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\DHN\Tab\A_tab_PhanTichDHN.designer.cs">
+      <DependentUpon>A_tab_PhanTichDHN.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\DHN\UserControl1.cs">
       <SubType>UserControl</SubType>
@@ -236,8 +236,9 @@
     <None Include="lib\LOTRINH.xls" />
     <None Include="lib\News.xls" />
     <None Include="lib\user.dat" />
+    <EmbeddedResource Include="Forms\DHN\BC\rptPhanTichHieuDHN.rdlc" />
+    <EmbeddedResource Include="Forms\DHN\BC\rptDanhSachGanMoi_DOT.rdlc" />
     <EmbeddedResource Include="Forms\DHN\BC\rptDanhSachGanMoi.rdlc" />
-    <EmbeddedResource Include="Forms\DHN\BC\rptDanhSachGanMoi_.rdlc" />
     <EmbeddedResource Include="Forms\DHN\BC\rptThongKeDHNTheoDot.rdlc" />
     <EmbeddedResource Include="Forms\DHN\BC\frmInBaoThay.resx">
       <DependentUpon>frmInBaoThay.cs</DependentUpon>
@@ -265,9 +266,6 @@
     <EmbeddedResource Include="Forms\DHN\frm_KiemTraThayDinhKy.resx">
       <DependentUpon>frm_KiemTraThayDinhKy.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DHN\frm_KiemTraThayDinhKy_.resx">
-      <DependentUpon>frm_KiemTraThayDinhKy_.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DHN\frm_Option_BT.resx">
       <DependentUpon>frm_Option_BT.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DHN\Tab\A_tab_ThongKeDHN_GM.resx">
       <DependentUpon>A_tab_ThongKeDHN_GM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DHN\Tab\A_tab_PhanTichDHN.resx">
+      <DependentUpon>A_tab_PhanTichDHN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Main.resx">
       <DependentUpon>frm_Main.cs</DependentUpon>

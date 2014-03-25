@@ -462,6 +462,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                             kh.BAOTHAY = false;
                             kh.CREATEDATE = DateTime.Now;
                             kh.CREATEBY = dataGridView2.Rows[i].Cells["DOT1"].Value.ToString();
+                            kh.BKGANMOI = this.txtDotGM.Text;
                             string[] sdate = dataGridView2.Rows[i].Cells["HIEULUC"].Value.ToString().Split('/');
                             kh.KY = int.Parse(sdate[0]);
                             kh.NAM = int.Parse(sdate[1]);

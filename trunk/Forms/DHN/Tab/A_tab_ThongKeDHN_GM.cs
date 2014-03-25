@@ -22,15 +22,17 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
             InitializeComponent();
             this.txtNam.Text = DateTime.Now.Year.ToString();
             cbKyDS.SelectedIndex = DateTime.Now.Month - 1;
+            cbDotDS.SelectedIndex = 1;
             cbLoaiBC.SelectedIndex = 0;
 
         }
 
         private void btThem_Click(object sender, EventArgs e)
         {
+            int dot = int.Parse(cbDotDS.Items[cbDotDS.SelectedIndex].ToString());
             int ky = int.Parse(cbKyDS.Items[cbKyDS.SelectedIndex].ToString());
             int nam = int.Parse(txtNam.Text.Trim());
-            string quanphuong = DAL.ThaoTac.getDuLieu(DoiCheck, TDcheck, Q9check, Q2check, BDcheck);
+            string quanphuong = DAL.ThaoTac.getDuLieu(rDoi, rThuDuc, rQuan9, rQuan2);
              string sql = "";
             if (cbLoaiBC.SelectedIndex == 0)
             {
@@ -60,7 +62,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 this.reportHieuDHN.LocalReport.DataSources.Clear();
                
                 ReportParameter p1 = new ReportParameter("hl", " KỲ " + ky + "/" + nam);
-                ReportParameter p2 = new ReportParameter("tods", DAL.ThaoTac.getToDS(DoiCheck, TDcheck, Q9check, Q2check, BDcheck));
+                ReportParameter p2 = new ReportParameter("tods", DAL.ThaoTac.getToDS(rDoi, rThuDuc, rQuan9, rQuan2));
                 this.reportHieuDHN.LocalReport.SetParameters(new ReportParameter[] { p1,p2 });
                 this.reportHieuDHN.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DHN_HIEUDHN", bang));
 
@@ -95,7 +97,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 DataTable bang = DAL.LinQConnection.getDataTable(sql);
                 reportQP.LocalReport.DataSources.Clear();
                 ReportParameter p1 = new ReportParameter("hl", " KỲ " + ky + "/" + nam);
-                ReportParameter p2 = new ReportParameter("tods", DAL.ThaoTac.getToDS(DoiCheck, TDcheck, Q9check, Q2check, BDcheck));
+                ReportParameter p2 = new ReportParameter("tods", DAL.ThaoTac.getToDS(rDoi, rThuDuc, rQuan9, rQuan2));
                 this.reportQP.LocalReport.SetParameters(new ReportParameter[] { p1, p2 });
                 reportQP.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DHN_QUANPHUONG", bang));
                 this.reportQP.RefreshReport();
@@ -126,8 +128,8 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 sql += " ORDER BY DOT  ASC ";
                 DataTable bang = DAL.LinQConnection.getDataTable(sql);
                 reportNamLD.LocalReport.DataSources.Clear();
-                ReportParameter p1 = new ReportParameter("hl", " KỲ " + ky + "/" + nam);
-                ReportParameter p2 = new ReportParameter("tods", DAL.ThaoTac.getToDS(DoiCheck, TDcheck, Q9check, Q2check, BDcheck));
+                ReportParameter p1 = new ReportParameter("hl", "ĐỢT  KỲ " + ky + "/" + nam);
+                ReportParameter p2 = new ReportParameter("tods", DAL.ThaoTac.getToDS(rDoi, rThuDuc, rQuan9, rQuan2));
                 this.reportNamLD.LocalReport.SetParameters(new ReportParameter[] { p1, p2 });
                 reportNamLD.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DHN_GM_DOT", bang));
                 this.reportNamLD.RefreshReport();
@@ -160,7 +162,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 DataTable bang = DAL.LinQConnection.getDataTable(sql);
                 reportNamLD.LocalReport.DataSources.Clear();
                 ReportParameter p1 = new ReportParameter("hl", " KỲ " + ky + "/" + nam);
-                ReportParameter p2 = new ReportParameter("tods", DAL.ThaoTac.getToDS(DoiCheck, TDcheck, Q9check, Q2check, BDcheck));
+                ReportParameter p2 = new ReportParameter("tods", DAL.ThaoTac.getToDS(rDoi, rThuDuc, rQuan9, rQuan2));
                 this.reportNamLD.LocalReport.SetParameters(new ReportParameter[] { p1, p2 });
                 reportNamLD.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DHN_GM_DOT", bang));
                 this.reportNamLD.RefreshReport();
@@ -171,15 +173,15 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 reportNamLD.Visible = false;
                 reportQP.Visible = false;
                 reportDSGM.Visible = true;
-                sql = " SELECT DOT,LOTRINH,DANHBO,HOPDONG,HOTEN,(SONHA + '' +TENDUONG) AS DIACHI, CODH,HIEUDH,NGAYTHAY,SOTHANDH FROM TB_DULIEUKHACHHANG kh ";
-                sql += " WHERE  kh.NAM=" + nam + " AND kh.KY_=" + ky + quanphuong;
+                sql = " SELECT  ROW_NUMBER() OVER (ORDER BY DANHBO  DESC) [STT],kh.* FROM TB_DULIEUKHACHHANG kh ";
+                sql += " WHERE kh.DOT=" + dot + " AND  kh.NAM=" + nam + " AND kh.KY_=" + ky + quanphuong;
                 sql += " ORDER BY DOT  ASC ";
                 DataTable bang = DAL.LinQConnection.getDataTable(sql);
                 reportDSGM.LocalReport.DataSources.Clear();
-                ReportParameter p1 = new ReportParameter("hl", " KỲ " + ky + "/" + nam);
-                ReportParameter p2 = new ReportParameter("tods", DAL.ThaoTac.getToDS(DoiCheck, TDcheck, Q9check, Q2check, BDcheck));
+                ReportParameter p1 = new ReportParameter("hl", "ĐỢT "+dot+" KỲ " + ky + "/" + nam);
+                ReportParameter p2 = new ReportParameter("tods", DAL.ThaoTac.getToDS(rDoi, rThuDuc, rQuan9, rQuan2));
                 this.reportDSGM.LocalReport.SetParameters(new ReportParameter[] { p1, p2 });
-                reportDSGM.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DANHSACHGM", bang));
+                reportDSGM.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("TB_DULIEUKHACHHANG", bang));
                 this.reportDSGM.RefreshReport();
 
             }
@@ -188,18 +190,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
 
         }
 
-        private void TDcheck_CheckedChanged(object sender, EventArgs e)
-        {
-            this.DoiCheck.Checked = false;
-        }
-
-        private void DoiCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            this.TDcheck.Checked = false;
-            this.BDcheck.Checked = false;
-            this.Q2check.Checked = false;
-            this.Q9check.Checked = false;
-        }
+       
 
     }
 }

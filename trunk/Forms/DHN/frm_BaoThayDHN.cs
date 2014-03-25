@@ -244,7 +244,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                     txtSoThan.Text = khachhang.SOTHANDH;
                     txtChiThan.Text = "CON";
                     txtChiGoc.Text = "CON";
-                    txtChiSoThay.Text = khachhang.CHISOKYTRUOC;
+                    txtChiSoThay.Text = DAL.QLDHN.C_DocSoTD.getCSDHN(sodanhbo)+""; 
                     KIEMDINH.ValueObject = khachhang.NGAYKIEMDINH;
                     txtDot.Text = khachhang.DOT;
                     txtMaLoTrinh.Text = khachhang.LOTRINH;
