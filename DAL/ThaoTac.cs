@@ -9,62 +9,47 @@ namespace CAPNUOCTHUDUC.DAL
 {
     class ThaoTac
     {
-        public static string getDuLieu(CheckBox doi, CheckBox td, CheckBox q9, CheckBox q2, CheckBox bd) 
+        public static string getDuLieu(RadioButton rDoi, RadioButton rThuDuc, RadioButton rQuan9, RadioButton rQuan2) 
         {
             string result = "";
-            if (doi.Checked)
+           
+            if (rThuDuc.Checked)
             {
-                return "";
+                return DAL.LinQConnection.getDataTable("SELECT GIOIHAN FROM TB_GIOIHAN WHERE TODS='TD' ").Rows[0][0].ToString();
             }
-            doi.Checked = false;
-            result = " AND (";
-            if (td.Checked)
+            if (rQuan9.Checked)
             {
-                result += " OR (QUAN='26') ";
+                return DAL.LinQConnection.getDataTable("SELECT GIOIHAN FROM TB_GIOIHAN WHERE TODS='Q9' ").Rows[0][0].ToString();
             }
-            if (q9.Checked)
+            if (rQuan2.Checked)
             {
-                result += " OR (QUAN='09') ";
+                return DAL.LinQConnection.getDataTable("SELECT GIOIHAN FROM TB_GIOIHAN WHERE TODS='Q2' ").Rows[0][0].ToString();
             }
-            if (q2.Checked)
-            {
-                result += " OR (QUAN='02') ";
-            }
-            if (bd.Checked)
-            {
-                result += " OR (QUAN='21') ";
-            }
-
-            result += " )";
-            result = result.Replace(" AND ( OR", " AND ( ").Replace(" AND ( )","");
+            
             return result;
         }
 
-        public static string getToDS(CheckBox doi, CheckBox td, CheckBox q9, CheckBox q2, CheckBox bd)
+        public static string getToDS(RadioButton rDoi, RadioButton rThuDuc, RadioButton rQuan9, RadioButton rQuan2) 
         {
             string result = "";
-            if (doi.Checked)
+            if (rDoi.Checked)
             {
                 return " ĐỘI QUẢN LÝ ĐỒNG HỒ NƯỚC";
             }
-            doi.Checked = false;
             result = " TỔ ";
-            if (td.Checked)
+            if (rThuDuc.Checked)
             {
                 result += " THỦ ĐỨC ";
             }
-            if (q9.Checked)
+            if (rQuan9.Checked)
             {
                 result += "- QUẬN 9 ";
             }
-            if (q2.Checked)
+            if (rQuan2 .Checked)
             {
-                result += "- QUẬN 2 ";
+                result += "- QUẬN 2 + BÌNH DƯƠNG";
             }
-            if (bd.Checked)
-            {
-                result += "- BÌNH DƯƠNG ";
-            }
+            
 
             result = result.Replace(" TỔ -", " TỔ ");
             return result;

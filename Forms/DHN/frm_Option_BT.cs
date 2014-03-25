@@ -128,7 +128,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                 thaydh.DHN_STT = int.Parse(dataBangKe.Rows[i].Cells["G_STT"].Value + "");
                 thaydh.DHN_DANHBO = sodanhbo;
                 thaydh.DHN_CHIGOC = dataBangKe.Rows[i].Cells["DHN_CHIGOC"].Value + "";
-                thaydh.DHN_CHISO = int.Parse(dataBangKe.Rows[i].Cells["G_CHISO"].Value == null ? (dataBangKe.Rows[i].Cells["G_CHISO"].Value +""):"0");
+                thaydh.DHN_CHISO = DAL.QLDHN.C_DocSoTD.getCSDHN(sodanhbo);
                 thaydh.DHN_CHITHAN = dataBangKe.Rows[i].Cells["CHITHAN"].Value + "";
                 thaydh.DHN_CODH = dataBangKe.Rows[i].Cells["G_CODHN"].Value + "";
                 thaydh.DHN_DOT = dataBangKe.Rows[i].Cells["DOT"].Value + "";

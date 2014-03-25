@@ -36,5 +36,11 @@ namespace CAPNUOCTHUDUC.Forms.DHN
             this.splitContainer1.Panel2.Controls.Clear();
             this.splitContainer1.Panel2.Controls.Add(new A_tab_ThongKeDHN_GM());
         }
+
+        private void rptPhanTichDHN_CheckedChanged(object sender, EventArgs e)
+        {
+            this.splitContainer1.Panel2.Controls.Clear();
+            this.splitContainer1.Panel2.Controls.Add(new A_tab_PhanTichDHN());
+        }
     }
 }

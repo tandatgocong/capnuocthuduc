@@ -66,7 +66,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
 
             string sql = "";
 
-            string quan = DAL.ThaoTac.getDuLieu(DoiCheck, TDcheck, Q9check, Q2check, BDcheck);
+            string quan = DAL.ThaoTac.getDuLieu(rDoi, rThuDuc, rQuan9, rQuan2);
             //if (DAL.SYS.C_USERS._toDocSo.Equals("TP"))
             //{
             //    quan = " = 31";
@@ -79,36 +79,36 @@ namespace CAPNUOCTHUDUC.Forms.DHN
 
             if (this.checHieu.Checked && this.nldCheck.Checked)
             {
-                sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL) " + quan + " AND CODH" + codh ;
-                sql += " AND (HIEUDH='" + cbHieuDongHo.SelectedValue + "' OR HIEUDH='" + cbHieuDongHo.Text + "')  " + " AND YEAR(NGAYTHAY) ='"+cbNamLD.SelectedValue+"' " + dot;
+                sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL) " + quan + " AND CODH" + codh;
+                sql += " AND (HIEUDH='" + cbHieuDongHo.SelectedValue + "' OR HIEUDH='" + cbHieuDongHo.Text + "')  " + " AND YEAR(NGAYTHAY) ='" + cbNamLD.SelectedValue + "' " + dot;
             }
             else
-            if (this.ckNgayThay.Checked && this.checHieu.Checked)
-            {
-                sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL) " + quan + " AND CODH" + codh + " AND NGAYTHAY <= '" + date.ToShortDateString() + "'  ";
-                sql += " AND (HIEUDH='" + cbHieuDongHo.SelectedValue + "' OR HIEUDH='" + cbHieuDongHo.Text + "')  " + dot;
-                //DataTable table = DAL.LinQConnection.getDataTable(sql);
-                //dataGrid.DataSource = table;
-                //Utilities.DataGridV.formatRows(dataGrid);
-            }
-            else if (this.ckNgayThay.Checked)
-            {
-                sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL)  " + quan + " AND CODH" + codh + "  AND NGAYTHAY <= '" + date.ToShortDateString() + "'  " + dot ;
-                //DataTable table = DAL.LinQConnection.getDataTable(sql);
-                //dataGrid.DataSource = table;
-                //Utilities.DataGridV.formatRows(dataGrid);
-            }
-            else if (this.checHieu.Checked)
-            {
-                sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL) " + quan + " AND CODH" + codh + " AND (HIEUDH='" + cbHieuDongHo.SelectedValue + "' OR HIEUDH='" + cbHieuDongHo.Text + "')  " + dot ;
+                if (this.ckNgayThay.Checked && this.checHieu.Checked)
+                {
+                    sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL) " + quan + " AND CODH" + codh + " AND NGAYTHAY <= '" + date.ToShortDateString() + "'  ";
+                    sql += " AND (HIEUDH='" + cbHieuDongHo.SelectedValue + "' OR HIEUDH='" + cbHieuDongHo.Text + "')  " + dot;
+                    //DataTable table = DAL.LinQConnection.getDataTable(sql);
+                    //dataGrid.DataSource = table;
+                    //Utilities.DataGridV.formatRows(dataGrid);
+                }
+                else if (this.ckNgayThay.Checked)
+                {
+                    sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL)  " + quan + " AND CODH" + codh + "  AND NGAYTHAY <= '" + date.ToShortDateString() + "'  " + dot;
+                    //DataTable table = DAL.LinQConnection.getDataTable(sql);
+                    //dataGrid.DataSource = table;
+                    //Utilities.DataGridV.formatRows(dataGrid);
+                }
+                else if (this.checHieu.Checked)
+                {
+                    sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL) " + quan + " AND CODH" + codh + " AND (HIEUDH='" + cbHieuDongHo.SelectedValue + "' OR HIEUDH='" + cbHieuDongHo.Text + "')  " + dot;
 
-            }
-            else if (this.nldCheck.Checked)
-            {
-                sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL) " + quan + " AND CODH" + codh + " AND YEAR(NGAYTHAY) ='" + cbNamLD.SelectedValue + "'  " + dot;
+                }
+                else if (this.nldCheck.Checked)
+                {
+                    sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL) " + quan + " AND CODH" + codh + " AND YEAR(NGAYTHAY) ='" + cbNamLD.SelectedValue + "'  " + dot;
 
-            }
-            
+                }
+
             sql += " ORDER BY DANHBO  ASC ";
             return sql;
 
@@ -159,9 +159,9 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                 Utilities.DataGridV.formatRows(dataGrid);
                 setBaoThay();
             }
-            catch (Exception )
+            catch (Exception)
             {
-               // MessageBox.Show(this, ex.Message);
+                // MessageBox.Show(this, ex.Message);
             }
 
         }
@@ -324,24 +324,6 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                     MessageBox.Show(this, "Bảng Kê Báo Thay <= " + Utilities.Files.numberRecord + " Danh Bộ", "..: Thông Báo :..", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-        }
-
-        private void TDcheck_CheckedChanged(object sender, EventArgs e)
-        {
-            this.DoiCheck.Checked = false;
-        }
-
-        private void BDcheck_CheckStateChanged(object sender, EventArgs e)
-        {
-            this.DoiCheck.Checked = false;
-        }
-
-        private void DoiCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            this.TDcheck.Checked = false;
-            this.Q9check.Checked = false;
-            this.Q2check.Checked = false;
-            this.BDcheck.Checked = false;
         }
     }
 }

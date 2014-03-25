@@ -101,6 +101,17 @@ namespace CAPNUOCTHUDUC.DAL.QLDHN
             return result;
         }
 
+        public static int getCSDHN(string danhbo)
+        {
+            DataTable tb = getDataTable("SELECT TOP(1) FROM ORDER BY NAM DESC ,KY DESC");
+            if (tb.Rows.Count > 0)
+            {
+                return int.Parse(tb.Rows[0][1] == null ? (tb.Rows[0][1] + "") : "0");
+            }
+            return 0;
+
+
+        }
     
 
  
