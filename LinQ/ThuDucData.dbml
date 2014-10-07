@@ -191,6 +191,7 @@
       <Column Name="KY_" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="MADMA" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="BKGANMOI" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="TODS" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

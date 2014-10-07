@@ -22,6 +22,8 @@ namespace CAPNUOCTHUDUC.Forms.DHN
         {
             InitializeComponent();
 
+            cbToDS.SelectedIndex = 0;
+
         }
 
         private void tabItem2_Click(object sender, EventArgs e)
@@ -424,6 +426,15 @@ namespace CAPNUOCTHUDUC.Forms.DHN
             }
         }
 
+        public int tods()
+        {
+            if (cbToDS.SelectedIndex == 1)
+                return 2;
+            else if (cbToDS.SelectedIndex == 2)
+                return 3;
+            return 1;
+        
+        }
         private void btCapNhatThongTin_Click(object sender, EventArgs e)
         {
             string listDanhBa = "";
@@ -467,10 +478,40 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                             kh.KY = int.Parse(sdate[0]);
                             kh.NAM = int.Parse(sdate[1]);
                             kh.KY_ = int.Parse(sdate[0]);
+                            kh.TODS = tods();
                             result += DAL.DULIEUKH.C_DuLieuKhachHang.Insert(kh);
                         }
                         else
                         {
+                            kh.KHU = "4";
+                            kh.DOT = dataGridView2.Rows[i].Cells["DOT2"].Value.ToString();
+                            kh.CUON_GCS = dataGridView2.Rows[i].Cells["LT2"].Value.ToString();
+                            kh.CUON_STT = dataGridView2.Rows[i].Cells["LT3"].Value.ToString();
+                            kh.LOTRINH = dataGridView2.Rows[i].Cells["LT1"].Value.ToString() + dataGridView2.Rows[i].Cells["LT2"].Value.ToString() + dataGridView2.Rows[i].Cells["LT3"].Value.ToString();
+                            kh.DANHBO = danhbo;
+                            kh.NGAYGANDH = dataGridView2.Rows[i].Cells["NGAYGAN"].Value.ToString();
+                            kh.HOPDONG = dataGridView2.Rows[i].Cells["HD1"].Value.ToString() + dataGridView2.Rows[i].Cells["HD2"].Value.ToString() + dataGridView2.Rows[i].Cells["HD3"].Value.ToString();
+                            kh.HOTEN = dataGridView2.Rows[i].Cells["G_HOTEN"].Value.ToString();
+                            kh.SONHA = "";
+                            kh.TENDUONG = dataGridView2.Rows[i].Cells["DIACHI"].Value.ToString();
+                            kh.PHUONG = dataGridView2.Rows[i].Cells["PHUONG"].Value.ToString();
+                            kh.QUAN = dataGridView2.Rows[i].Cells["QUAN"].Value.ToString();
+                            kh.GIABIEU = dataGridView2.Rows[i].Cells["GB"].Value.ToString();
+                            kh.DINHMUC = dataGridView2.Rows[i].Cells["DM"].Value.ToString();
+                            kh.CODH = dataGridView2.Rows[i].Cells["TLK"].Value.ToString();
+                            kh.HIEUDH = dataGridView2.Rows[i].Cells["HIEU"].Value.ToString();
+                            kh.SOTHANDH = dataGridView2.Rows[i].Cells["SOTHAN"].Value.ToString();
+                            kh.NGAYTHAY = DateTime.ParseExact(dataGridView2.Rows[i].Cells["NGAYGAN"].Value.ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture); ;
+                            kh.BAOTHAY = false;
+                            kh.CREATEDATE = DateTime.Now;
+                            kh.CREATEBY = dataGridView2.Rows[i].Cells["DOT1"].Value.ToString();
+                            kh.BKGANMOI = this.txtDotGM.Text;
+                            string[] sdate = dataGridView2.Rows[i].Cells["HIEULUC"].Value.ToString().Split('/');
+                            kh.KY = int.Parse(sdate[0]);
+                            kh.NAM = int.Parse(sdate[1]);
+                            kh.KY_ = int.Parse(sdate[0]);
+                            kh.TODS = tods();
+                            DAL.DULIEUKH.C_DuLieuKhachHang.Update();
                             log.Error("Trung danh bo " + danhbo);
                         }
                     }
@@ -507,6 +548,11 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                 
             }
            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(this, tods()+"");
         }
     }
 }

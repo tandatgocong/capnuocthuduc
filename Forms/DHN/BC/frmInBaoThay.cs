@@ -20,7 +20,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN.BC
                 sql += " FROM TB_THAYDHN thay, TB_DULIEUKHACHHANG kh ";
                 sql += " WHERE thay.DHN_DANHBO=kh.DANHBO";
                 sql += " AND DHN_DANHBO IN (" + danhbo + ") ";
-                sql += " ORDER BY DHN_DANHBO ASC";
+                sql += " ORDER BY DHN_STT ASC";
 
                 DataTable bang = DAL.LinQConnection.getDataTable(sql);
                 this.reportViewer1.LocalReport.DataSources.Clear();
@@ -34,7 +34,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN.BC
                 sql += " FROM TB_THAYDHN thay, TB_DULIEUKHACHHANG kh ";
                 sql += " WHERE thay.DHN_DANHBO=kh.DANHBO";
                 sql += " AND DHN_SOBANGKE ='" + sobk + "' ";
-                sql += " ORDER BY DHN_DANHBO ASC";
+                sql += " ORDER BY DHN_STT ASC";
 
                 DataTable bang = DAL.LinQConnection.getDataTable(sql);
                 this.reportViewer1.LocalReport.DataSources.Clear();

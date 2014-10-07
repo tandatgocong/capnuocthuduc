@@ -774,6 +774,28 @@ SELECT '' AS STT, KHU, DOT, CUON_GCS, CUON_STT, LOTRINH, DANHBO, NGAYGANDH, HOPD
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TONGGANMOITableAdapter" GeneratorDataComponentClassName="TONGGANMOITableAdapter" Name="TONGGANMOI" UserDataComponentName="TONGGANMOITableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CAPNUOCTHUDUCConnectionString (Settings)" DbObjectName="CAPNUOCTHUDUC.dbo.TONGGANMOI" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DOT, TONG, KEN, BAY, ACT, MUL, SEN FROM dbo.TONGGANMOI</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DOT" DataSetColumn="DOT" />
+              <Mapping SourceColumn="TONG" DataSetColumn="TONG" />
+              <Mapping SourceColumn="KEN" DataSetColumn="KEN" />
+              <Mapping SourceColumn="BAY" DataSetColumn="BAY" />
+              <Mapping SourceColumn="ACT" DataSetColumn="ACT" />
+              <Mapping SourceColumn="MUL" DataSetColumn="MUL" />
+              <Mapping SourceColumn="SEN" DataSetColumn="SEN" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -782,7 +804,7 @@ SELECT '' AS STT, KHU, DOT, CUON_GCS, CUON_STT, LOTRINH, DANHBO, NGAYGANDH, HOPD
   <xs:element name="CAPNUOCTHUDUCDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CAPNUOCTHUDUCDataSet" msprop:Generator_UserDSName="CAPNUOCTHUDUCDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="DHN_HIEUDHN" msprop:Generator_TableClassName="DHN_HIEUDHNDataTable" msprop:Generator_TableVarName="tableDHN_HIEUDHN" msprop:Generator_TablePropName="DHN_HIEUDHN" msprop:Generator_RowDeletingName="DHN_HIEUDHNRowDeleting" msprop:Generator_RowChangingName="DHN_HIEUDHNRowChanging" msprop:Generator_RowEvHandlerName="DHN_HIEUDHNRowChangeEventHandler" msprop:Generator_RowDeletedName="DHN_HIEUDHNRowDeleted" msprop:Generator_UserTableName="DHN_HIEUDHN" msprop:Generator_RowChangedName="DHN_HIEUDHNRowChanged" msprop:Generator_RowEvArgName="DHN_HIEUDHNRowChangeEvent" msprop:Generator_RowClassName="DHN_HIEUDHNRow">
+        <xs:element name="DHN_HIEUDHN" msprop:Generator_TableClassName="DHN_HIEUDHNDataTable" msprop:Generator_TableVarName="tableDHN_HIEUDHN" msprop:Generator_RowChangedName="DHN_HIEUDHNRowChanged" msprop:Generator_TablePropName="DHN_HIEUDHN" msprop:Generator_RowDeletingName="DHN_HIEUDHNRowDeleting" msprop:Generator_RowChangingName="DHN_HIEUDHNRowChanging" msprop:Generator_RowEvHandlerName="DHN_HIEUDHNRowChangeEventHandler" msprop:Generator_RowDeletedName="DHN_HIEUDHNRowDeleted" msprop:Generator_RowClassName="DHN_HIEUDHNRow" msprop:Generator_UserTableName="DHN_HIEUDHN" msprop:Generator_RowEvArgName="DHN_HIEUDHNRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HIEU" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHIEU" msprop:Generator_ColumnPropNameInRow="HIEU" msprop:Generator_ColumnPropNameInTable="HIEUColumn" msprop:Generator_UserColumnName="HIEU" minOccurs="0">
@@ -808,7 +830,7 @@ SELECT '' AS STT, KHU, DOT, CUON_GCS, CUON_STT, LOTRINH, DANHBO, NGAYGANDH, HOPD
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DHN_QUANPHUONG" msprop:Generator_TableClassName="DHN_QUANPHUONGDataTable" msprop:Generator_TableVarName="tableDHN_QUANPHUONG" msprop:Generator_TablePropName="DHN_QUANPHUONG" msprop:Generator_RowDeletingName="DHN_QUANPHUONGRowDeleting" msprop:Generator_RowChangingName="DHN_QUANPHUONGRowChanging" msprop:Generator_RowEvHandlerName="DHN_QUANPHUONGRowChangeEventHandler" msprop:Generator_RowDeletedName="DHN_QUANPHUONGRowDeleted" msprop:Generator_UserTableName="DHN_QUANPHUONG" msprop:Generator_RowChangedName="DHN_QUANPHUONGRowChanged" msprop:Generator_RowEvArgName="DHN_QUANPHUONGRowChangeEvent" msprop:Generator_RowClassName="DHN_QUANPHUONGRow">
+        <xs:element name="DHN_QUANPHUONG" msprop:Generator_TableClassName="DHN_QUANPHUONGDataTable" msprop:Generator_TableVarName="tableDHN_QUANPHUONG" msprop:Generator_RowChangedName="DHN_QUANPHUONGRowChanged" msprop:Generator_TablePropName="DHN_QUANPHUONG" msprop:Generator_RowDeletingName="DHN_QUANPHUONGRowDeleting" msprop:Generator_RowChangingName="DHN_QUANPHUONGRowChanging" msprop:Generator_RowEvHandlerName="DHN_QUANPHUONGRowChangeEventHandler" msprop:Generator_RowDeletedName="DHN_QUANPHUONGRowDeleted" msprop:Generator_RowClassName="DHN_QUANPHUONGRow" msprop:Generator_UserTableName="DHN_QUANPHUONG" msprop:Generator_RowEvArgName="DHN_QUANPHUONGRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MAQUAN" msprop:Generator_ColumnVarNameInTable="columnMAQUAN" msprop:Generator_ColumnPropNameInRow="MAQUAN" msprop:Generator_ColumnPropNameInTable="MAQUANColumn" msprop:Generator_UserColumnName="MAQUAN">
@@ -855,7 +877,7 @@ SELECT '' AS STT, KHU, DOT, CUON_GCS, CUON_STT, LOTRINH, DANHBO, NGAYGANDH, HOPD
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="RP_THAYDHN" msprop:Generator_TableClassName="RP_THAYDHNDataTable" msprop:Generator_TableVarName="tableRP_THAYDHN" msprop:Generator_TablePropName="RP_THAYDHN" msprop:Generator_RowDeletingName="RP_THAYDHNRowDeleting" msprop:Generator_RowChangingName="RP_THAYDHNRowChanging" msprop:Generator_RowEvHandlerName="RP_THAYDHNRowChangeEventHandler" msprop:Generator_RowDeletedName="RP_THAYDHNRowDeleted" msprop:Generator_UserTableName="RP_THAYDHN" msprop:Generator_RowChangedName="RP_THAYDHNRowChanged" msprop:Generator_RowEvArgName="RP_THAYDHNRowChangeEvent" msprop:Generator_RowClassName="RP_THAYDHNRow">
+        <xs:element name="RP_THAYDHN" msprop:Generator_TableClassName="RP_THAYDHNDataTable" msprop:Generator_TableVarName="tableRP_THAYDHN" msprop:Generator_RowChangedName="RP_THAYDHNRowChanged" msprop:Generator_TablePropName="RP_THAYDHN" msprop:Generator_RowDeletingName="RP_THAYDHNRowDeleting" msprop:Generator_RowChangingName="RP_THAYDHNRowChanging" msprop:Generator_RowEvHandlerName="RP_THAYDHNRowChangeEventHandler" msprop:Generator_RowDeletedName="RP_THAYDHNRowDeleted" msprop:Generator_RowClassName="RP_THAYDHNRow" msprop:Generator_UserTableName="RP_THAYDHN" msprop:Generator_RowEvArgName="RP_THAYDHNRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="HOPDONG" msprop:Generator_ColumnVarNameInTable="columnHOPDONG" msprop:Generator_ColumnPropNameInRow="HOPDONG" msprop:Generator_ColumnPropNameInTable="HOPDONGColumn" msprop:Generator_UserColumnName="HOPDONG" minOccurs="0">
@@ -1108,7 +1130,7 @@ SELECT '' AS STT, KHU, DOT, CUON_GCS, CUON_STT, LOTRINH, DANHBO, NGAYGANDH, HOPD
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DHN_NAMLD" msprop:Generator_TableClassName="DHN_NAMLDDataTable" msprop:Generator_TableVarName="tableDHN_NAMLD" msprop:Generator_TablePropName="DHN_NAMLD" msprop:Generator_RowDeletingName="DHN_NAMLDRowDeleting" msprop:Generator_RowChangingName="DHN_NAMLDRowChanging" msprop:Generator_RowEvHandlerName="DHN_NAMLDRowChangeEventHandler" msprop:Generator_RowDeletedName="DHN_NAMLDRowDeleted" msprop:Generator_UserTableName="DHN_NAMLD" msprop:Generator_RowChangedName="DHN_NAMLDRowChanged" msprop:Generator_RowEvArgName="DHN_NAMLDRowChangeEvent" msprop:Generator_RowClassName="DHN_NAMLDRow">
+        <xs:element name="DHN_NAMLD" msprop:Generator_TableClassName="DHN_NAMLDDataTable" msprop:Generator_TableVarName="tableDHN_NAMLD" msprop:Generator_RowChangedName="DHN_NAMLDRowChanged" msprop:Generator_TablePropName="DHN_NAMLD" msprop:Generator_RowDeletingName="DHN_NAMLDRowDeleting" msprop:Generator_RowChangingName="DHN_NAMLDRowChanging" msprop:Generator_RowEvHandlerName="DHN_NAMLDRowChangeEventHandler" msprop:Generator_RowDeletedName="DHN_NAMLDRowDeleted" msprop:Generator_RowClassName="DHN_NAMLDRow" msprop:Generator_UserTableName="DHN_NAMLD" msprop:Generator_RowEvArgName="DHN_NAMLDRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NAMLD" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNAMLD" msprop:Generator_ColumnPropNameInRow="NAMLD" msprop:Generator_ColumnPropNameInTable="NAMLDColumn" msprop:Generator_UserColumnName="NAMLD" type="xs:int" minOccurs="0" />
@@ -1128,7 +1150,7 @@ SELECT '' AS STT, KHU, DOT, CUON_GCS, CUON_STT, LOTRINH, DANHBO, NGAYGANDH, HOPD
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DHN_GM_DOT" msprop:Generator_TableClassName="DHN_GM_DOTDataTable" msprop:Generator_TableVarName="tableDHN_GM_DOT" msprop:Generator_RowChangedName="DHN_GM_DOTRowChanged" msprop:Generator_TablePropName="DHN_GM_DOT" msprop:Generator_RowDeletingName="DHN_GM_DOTRowDeleting" msprop:Generator_RowChangingName="DHN_GM_DOTRowChanging" msprop:Generator_RowEvHandlerName="DHN_GM_DOTRowChangeEventHandler" msprop:Generator_RowDeletedName="DHN_GM_DOTRowDeleted" msprop:Generator_RowClassName="DHN_GM_DOTRow" msprop:Generator_UserTableName="DHN_GM_DOT" msprop:Generator_RowEvArgName="DHN_GM_DOTRowChangeEvent">
+        <xs:element name="DHN_GM_DOT" msprop:Generator_TableClassName="DHN_GM_DOTDataTable" msprop:Generator_TableVarName="tableDHN_GM_DOT" msprop:Generator_TablePropName="DHN_GM_DOT" msprop:Generator_RowDeletingName="DHN_GM_DOTRowDeleting" msprop:Generator_RowChangingName="DHN_GM_DOTRowChanging" msprop:Generator_RowEvHandlerName="DHN_GM_DOTRowChangeEventHandler" msprop:Generator_RowDeletedName="DHN_GM_DOTRowDeleted" msprop:Generator_UserTableName="DHN_GM_DOT" msprop:Generator_RowChangedName="DHN_GM_DOTRowChanged" msprop:Generator_RowEvArgName="DHN_GM_DOTRowChangeEvent" msprop:Generator_RowClassName="DHN_GM_DOTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DOT" msprop:Generator_ColumnVarNameInTable="columnDOT" msprop:Generator_ColumnPropNameInRow="DOT" msprop:Generator_ColumnPropNameInTable="DOTColumn" msprop:Generator_UserColumnName="DOT" minOccurs="0">
@@ -1154,7 +1176,7 @@ SELECT '' AS STT, KHU, DOT, CUON_GCS, CUON_STT, LOTRINH, DANHBO, NGAYGANDH, HOPD
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DANHSACHGM" msprop:Generator_TableClassName="DANHSACHGMDataTable" msprop:Generator_TableVarName="tableDANHSACHGM" msprop:Generator_RowChangedName="DANHSACHGMRowChanged" msprop:Generator_TablePropName="DANHSACHGM" msprop:Generator_RowDeletingName="DANHSACHGMRowDeleting" msprop:Generator_RowChangingName="DANHSACHGMRowChanging" msprop:Generator_RowEvHandlerName="DANHSACHGMRowChangeEventHandler" msprop:Generator_RowDeletedName="DANHSACHGMRowDeleted" msprop:Generator_RowClassName="DANHSACHGMRow" msprop:Generator_UserTableName="DANHSACHGM" msprop:Generator_RowEvArgName="DANHSACHGMRowChangeEvent">
+        <xs:element name="DANHSACHGM" msprop:Generator_TableClassName="DANHSACHGMDataTable" msprop:Generator_TableVarName="tableDANHSACHGM" msprop:Generator_TablePropName="DANHSACHGM" msprop:Generator_RowDeletingName="DANHSACHGMRowDeleting" msprop:Generator_RowChangingName="DANHSACHGMRowChanging" msprop:Generator_RowEvHandlerName="DANHSACHGMRowChangeEventHandler" msprop:Generator_RowDeletedName="DANHSACHGMRowDeleted" msprop:Generator_UserTableName="DANHSACHGM" msprop:Generator_RowChangedName="DANHSACHGMRowChanged" msprop:Generator_RowEvArgName="DANHSACHGMRowChangeEvent" msprop:Generator_RowClassName="DANHSACHGMRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DOT" msprop:Generator_ColumnVarNameInTable="columnDOT" msprop:Generator_ColumnPropNameInRow="DOT" msprop:Generator_ColumnPropNameInTable="DOTColumn" msprop:Generator_UserColumnName="DOT" minOccurs="0">
@@ -1224,7 +1246,7 @@ SELECT '' AS STT, KHU, DOT, CUON_GCS, CUON_STT, LOTRINH, DANHBO, NGAYGANDH, HOPD
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TB_DULIEUKHACHHANG" msprop:Generator_TableClassName="TB_DULIEUKHACHHANGDataTable" msprop:Generator_TableVarName="tableTB_DULIEUKHACHHANG" msprop:Generator_RowChangedName="TB_DULIEUKHACHHANGRowChanged" msprop:Generator_TablePropName="TB_DULIEUKHACHHANG" msprop:Generator_RowDeletingName="TB_DULIEUKHACHHANGRowDeleting" msprop:Generator_RowChangingName="TB_DULIEUKHACHHANGRowChanging" msprop:Generator_RowEvHandlerName="TB_DULIEUKHACHHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="TB_DULIEUKHACHHANGRowDeleted" msprop:Generator_RowClassName="TB_DULIEUKHACHHANGRow" msprop:Generator_UserTableName="TB_DULIEUKHACHHANG" msprop:Generator_RowEvArgName="TB_DULIEUKHACHHANGRowChangeEvent">
+        <xs:element name="TB_DULIEUKHACHHANG" msprop:Generator_TableClassName="TB_DULIEUKHACHHANGDataTable" msprop:Generator_TableVarName="tableTB_DULIEUKHACHHANG" msprop:Generator_TablePropName="TB_DULIEUKHACHHANG" msprop:Generator_RowDeletingName="TB_DULIEUKHACHHANGRowDeleting" msprop:Generator_RowChangingName="TB_DULIEUKHACHHANGRowChanging" msprop:Generator_RowEvHandlerName="TB_DULIEUKHACHHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="TB_DULIEUKHACHHANGRowDeleted" msprop:Generator_UserTableName="TB_DULIEUKHACHHANG" msprop:Generator_RowChangedName="TB_DULIEUKHACHHANGRowChanged" msprop:Generator_RowEvArgName="TB_DULIEUKHACHHANGRowChangeEvent" msprop:Generator_RowClassName="TB_DULIEUKHACHHANGRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="STT" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSTT" msprop:Generator_ColumnPropNameInRow="STT" msprop:Generator_ColumnPropNameInTable="STTColumn" msprop:Generator_UserColumnName="STT" minOccurs="0">
@@ -1511,7 +1533,7 @@ SELECT '' AS STT, KHU, DOT, CUON_GCS, CUON_STT, LOTRINH, DANHBO, NGAYGANDH, HOPD
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TB_HIEUDONGHO" msprop:Generator_TableClassName="TB_HIEUDONGHODataTable" msprop:Generator_TableVarName="tableTB_HIEUDONGHO" msprop:Generator_TablePropName="TB_HIEUDONGHO" msprop:Generator_RowDeletingName="TB_HIEUDONGHORowDeleting" msprop:Generator_RowChangingName="TB_HIEUDONGHORowChanging" msprop:Generator_RowEvHandlerName="TB_HIEUDONGHORowChangeEventHandler" msprop:Generator_RowDeletedName="TB_HIEUDONGHORowDeleted" msprop:Generator_UserTableName="TB_HIEUDONGHO" msprop:Generator_RowChangedName="TB_HIEUDONGHORowChanged" msprop:Generator_RowEvArgName="TB_HIEUDONGHORowChangeEvent" msprop:Generator_RowClassName="TB_HIEUDONGHORow">
+        <xs:element name="TB_HIEUDONGHO" msprop:Generator_TableClassName="TB_HIEUDONGHODataTable" msprop:Generator_TableVarName="tableTB_HIEUDONGHO" msprop:Generator_RowChangedName="TB_HIEUDONGHORowChanged" msprop:Generator_TablePropName="TB_HIEUDONGHO" msprop:Generator_RowDeletingName="TB_HIEUDONGHORowDeleting" msprop:Generator_RowChangingName="TB_HIEUDONGHORowChanging" msprop:Generator_RowEvHandlerName="TB_HIEUDONGHORowChangeEventHandler" msprop:Generator_RowDeletedName="TB_HIEUDONGHORowDeleted" msprop:Generator_RowClassName="TB_HIEUDONGHORow" msprop:Generator_UserTableName="TB_HIEUDONGHO" msprop:Generator_RowEvArgName="TB_HIEUDONGHORowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TENDONGHO" msprop:Generator_ColumnVarNameInTable="columnTENDONGHO" msprop:Generator_ColumnPropNameInRow="TENDONGHO" msprop:Generator_ColumnPropNameInTable="TENDONGHOColumn" msprop:Generator_UserColumnName="TENDONGHO" minOccurs="0">
@@ -1557,6 +1579,25 @@ SELECT '' AS STT, KHU, DOT, CUON_GCS, CUON_STT, LOTRINH, DANHBO, NGAYGANDH, HOPD
               <xs:element name="LONCO200" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLONCO200" msprop:Generator_ColumnPropNameInRow="LONCO200" msprop:Generator_ColumnPropNameInTable="LONCO200Column" msprop:Generator_UserColumnName="LONCO200" type="xs:int" minOccurs="0" />
               <xs:element name="LONCO300" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLONCO300" msprop:Generator_ColumnPropNameInRow="LONCO300" msprop:Generator_ColumnPropNameInTable="LONCO300Column" msprop:Generator_UserColumnName="LONCO300" type="xs:int" minOccurs="0" />
               <xs:element name="LONCO400" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLONCO400" msprop:Generator_ColumnPropNameInRow="LONCO400" msprop:Generator_ColumnPropNameInTable="LONCO400Column" msprop:Generator_UserColumnName="LONCO400" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TONGGANMOI" msprop:Generator_TableClassName="TONGGANMOIDataTable" msprop:Generator_TableVarName="tableTONGGANMOI" msprop:Generator_TablePropName="TONGGANMOI" msprop:Generator_RowDeletingName="TONGGANMOIRowDeleting" msprop:Generator_RowChangingName="TONGGANMOIRowChanging" msprop:Generator_RowEvHandlerName="TONGGANMOIRowChangeEventHandler" msprop:Generator_RowDeletedName="TONGGANMOIRowDeleted" msprop:Generator_UserTableName="TONGGANMOI" msprop:Generator_RowChangedName="TONGGANMOIRowChanged" msprop:Generator_RowEvArgName="TONGGANMOIRowChangeEvent" msprop:Generator_RowClassName="TONGGANMOIRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DOT" msprop:Generator_ColumnVarNameInTable="columnDOT" msprop:Generator_ColumnPropNameInRow="DOT" msprop:Generator_ColumnPropNameInTable="DOTColumn" msprop:Generator_UserColumnName="DOT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TONG" msprop:Generator_ColumnVarNameInTable="columnTONG" msprop:Generator_ColumnPropNameInRow="TONG" msprop:Generator_ColumnPropNameInTable="TONGColumn" msprop:Generator_UserColumnName="TONG" type="xs:int" minOccurs="0" />
+              <xs:element name="KEN" msprop:Generator_ColumnVarNameInTable="columnKEN" msprop:Generator_ColumnPropNameInRow="KEN" msprop:Generator_ColumnPropNameInTable="KENColumn" msprop:Generator_UserColumnName="KEN" type="xs:int" minOccurs="0" />
+              <xs:element name="BAY" msprop:Generator_ColumnVarNameInTable="columnBAY" msprop:Generator_ColumnPropNameInRow="BAY" msprop:Generator_ColumnPropNameInTable="BAYColumn" msprop:Generator_UserColumnName="BAY" type="xs:int" minOccurs="0" />
+              <xs:element name="ACT" msprop:Generator_ColumnVarNameInTable="columnACT" msprop:Generator_ColumnPropNameInRow="ACT" msprop:Generator_ColumnPropNameInTable="ACTColumn" msprop:Generator_UserColumnName="ACT" type="xs:int" minOccurs="0" />
+              <xs:element name="MUL" msprop:Generator_ColumnVarNameInTable="columnMUL" msprop:Generator_ColumnPropNameInRow="MUL" msprop:Generator_ColumnPropNameInTable="MULColumn" msprop:Generator_UserColumnName="MUL" type="xs:int" minOccurs="0" />
+              <xs:element name="SEN" msprop:Generator_ColumnVarNameInTable="columnSEN" msprop:Generator_ColumnPropNameInRow="SEN" msprop:Generator_ColumnPropNameInTable="SENColumn" msprop:Generator_UserColumnName="SEN" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

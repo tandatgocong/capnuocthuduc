@@ -47,7 +47,7 @@ namespace CAPNUOCTHUDUC.DAL
             }
             if (rQuan2 .Checked)
             {
-                result += "- QUẬN 2 + BÌNH DƯƠNG";
+                result += "- QUẬN 2";
             }
             
 

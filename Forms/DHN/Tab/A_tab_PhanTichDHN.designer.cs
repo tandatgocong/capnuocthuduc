@@ -156,8 +156,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.reportHieuDHN);
-            this.splitContainer1.Size = new System.Drawing.Size(1108, 630);
-            this.splitContainer1.SplitterDistance = 49;
+            this.splitContainer1.Size = new System.Drawing.Size(1108, 600);
+            this.splitContainer1.SplitterDistance = 44;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox1
@@ -182,7 +182,7 @@
             this.rQuan2.AutoSize = true;
             this.rQuan2.Location = new System.Drawing.Point(252, 15);
             this.rQuan2.Name = "rQuan2";
-            this.rQuan2.Size = new System.Drawing.Size(116, 23);
+            this.rQuan2.Size = new System.Drawing.Size(87, 17);
             this.rQuan2.TabIndex = 110;
             this.rQuan2.Text = "Quận 2 + BD";
             this.rQuan2.UseVisualStyleBackColor = true;
@@ -192,7 +192,7 @@
             this.rQuan9.AutoSize = true;
             this.rQuan9.Location = new System.Drawing.Point(171, 15);
             this.rQuan9.Name = "rQuan9";
-            this.rQuan9.Size = new System.Drawing.Size(75, 23);
+            this.rQuan9.Size = new System.Drawing.Size(60, 17);
             this.rQuan9.TabIndex = 111;
             this.rQuan9.Text = "Quận 9";
             this.rQuan9.UseVisualStyleBackColor = true;
@@ -202,7 +202,7 @@
             this.rThuDuc.AutoSize = true;
             this.rThuDuc.Location = new System.Drawing.Point(80, 15);
             this.rThuDuc.Name = "rThuDuc";
-            this.rThuDuc.Size = new System.Drawing.Size(85, 23);
+            this.rThuDuc.Size = new System.Drawing.Size(67, 17);
             this.rThuDuc.TabIndex = 108;
             this.rThuDuc.Text = "Thủ Đức";
             this.rThuDuc.UseVisualStyleBackColor = true;
@@ -213,7 +213,7 @@
             this.rDoi.Checked = true;
             this.rDoi.Location = new System.Drawing.Point(11, 15);
             this.rDoi.Name = "rDoi";
-            this.rDoi.Size = new System.Drawing.Size(53, 23);
+            this.rDoi.Size = new System.Drawing.Size(41, 17);
             this.rDoi.TabIndex = 109;
             this.rDoi.TabStop = true;
             this.rDoi.Text = "Đội";
@@ -364,7 +364,7 @@
             this.reportHieuDHN.LocalReport.ReportEmbeddedResource = "CAPNUOCTHUDUC.Forms.DHN.BC.rptPhanTichHieuDHN.rdlc";
             this.reportHieuDHN.Location = new System.Drawing.Point(0, 0);
             this.reportHieuDHN.Name = "reportHieuDHN";
-            this.reportHieuDHN.Size = new System.Drawing.Size(1108, 577);
+            this.reportHieuDHN.Size = new System.Drawing.Size(1108, 552);
             this.reportHieuDHN.TabIndex = 0;
             // 
             // A_tab_PhanTichDHN
@@ -377,7 +377,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12.75F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "A_tab_PhanTichDHN";
-            this.Size = new System.Drawing.Size(1108, 630);
+            this.Size = new System.Drawing.Size(1108, 600);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
