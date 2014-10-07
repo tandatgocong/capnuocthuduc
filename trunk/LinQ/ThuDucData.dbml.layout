@@ -14,7 +14,7 @@
         <elementListCompartment Id="afb2fb75-c2d2-48e3-b489-e449d87c8218" absoluteBounds="2.89, 2.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(4.34375 : 2.5); (4.34375 : 2.0112939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(4.34375 : 2.5); (4.34375 : 2.0112939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/ThuDucDataContext/TB_QUAN/TB_QUAN_TB_PHUONG" />
       <nodes>
         <classShapeMoniker Id="f72da6b6-6a26-414d-8ccb-ced5b975a3f7" />
@@ -45,10 +45,10 @@
         <elementListCompartment Id="c029e314-63d8-4242-ad00-af0c72c0020d" absoluteBounds="6.39, 3.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="e2f4cf33-2282-4286-a03b-f5400472a894" absoluteBounds="0.5, 0.5, 2, 9.6552555338541648">
+    <classShape Id="8bb25086-03ce-426f-a76e-2e97442a0678" absoluteBounds="0.875, 0.75, 2, 9.8475569661458326">
       <DataClassMoniker Name="/ThuDucDataContext/TB_DULIEUKHACHHANG" />
       <nestedChildShapes>
-        <elementListCompartment Id="9b1e4cf8-dfa3-4d2d-a32f-71f064efcc90" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 9.0952555338541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="d7b516b2-001f-41aa-8a75-441bd82f7dc2" absoluteBounds="0.89, 1.21, 1.9700000000000002, 9.2875569661458321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

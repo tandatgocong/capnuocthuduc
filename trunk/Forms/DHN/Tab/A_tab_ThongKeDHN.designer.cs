@@ -42,6 +42,10 @@
             this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rQuan2 = new System.Windows.Forms.RadioButton();
+            this.rQuan9 = new System.Windows.Forms.RadioButton();
+            this.rThuDuc = new System.Windows.Forms.RadioButton();
+            this.rDoi = new System.Windows.Forms.RadioButton();
             this.cbLoaiBC = new DevComponents.DotNetBar.Controls.ComboBoxEx();
             this.comboItem25 = new DevComponents.Editors.ComboItem();
             this.comboItem26 = new DevComponents.Editors.ComboItem();
@@ -66,10 +70,6 @@
             this.reportNamLD = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportQP = new Microsoft.Reporting.WinForms.ReportViewer();
             this.reportHieuDHN = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.rQuan2 = new System.Windows.Forms.RadioButton();
-            this.rQuan9 = new System.Windows.Forms.RadioButton();
-            this.rThuDuc = new System.Windows.Forms.RadioButton();
-            this.rDoi = new System.Windows.Forms.RadioButton();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -164,8 +164,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.reportNamLD);
             this.splitContainer1.Panel2.Controls.Add(this.reportQP);
             this.splitContainer1.Panel2.Controls.Add(this.reportHieuDHN);
-            this.splitContainer1.Size = new System.Drawing.Size(1108, 630);
-            this.splitContainer1.SplitterDistance = 80;
+            this.splitContainer1.Size = new System.Drawing.Size(1108, 600);
+            this.splitContainer1.SplitterDistance = 76;
             this.splitContainer1.TabIndex = 0;
             // 
             // groupBox1
@@ -185,6 +185,48 @@
             this.groupBox1.Size = new System.Drawing.Size(1103, 77);
             this.groupBox1.TabIndex = 715;
             this.groupBox1.TabStop = false;
+            // 
+            // rQuan2
+            // 
+            this.rQuan2.AutoSize = true;
+            this.rQuan2.Location = new System.Drawing.Point(338, 15);
+            this.rQuan2.Name = "rQuan2";
+            this.rQuan2.Size = new System.Drawing.Size(87, 17);
+            this.rQuan2.TabIndex = 110;
+            this.rQuan2.Text = "Quận 2 + BD";
+            this.rQuan2.UseVisualStyleBackColor = true;
+            // 
+            // rQuan9
+            // 
+            this.rQuan9.AutoSize = true;
+            this.rQuan9.Location = new System.Drawing.Point(224, 15);
+            this.rQuan9.Name = "rQuan9";
+            this.rQuan9.Size = new System.Drawing.Size(60, 17);
+            this.rQuan9.TabIndex = 111;
+            this.rQuan9.Text = "Quận 9";
+            this.rQuan9.UseVisualStyleBackColor = true;
+            // 
+            // rThuDuc
+            // 
+            this.rThuDuc.AutoSize = true;
+            this.rThuDuc.Location = new System.Drawing.Point(109, 15);
+            this.rThuDuc.Name = "rThuDuc";
+            this.rThuDuc.Size = new System.Drawing.Size(67, 17);
+            this.rThuDuc.TabIndex = 108;
+            this.rThuDuc.Text = "Thủ Đức";
+            this.rThuDuc.UseVisualStyleBackColor = true;
+            // 
+            // rDoi
+            // 
+            this.rDoi.AutoSize = true;
+            this.rDoi.Checked = true;
+            this.rDoi.Location = new System.Drawing.Point(11, 15);
+            this.rDoi.Name = "rDoi";
+            this.rDoi.Size = new System.Drawing.Size(41, 17);
+            this.rDoi.TabIndex = 109;
+            this.rDoi.TabStop = true;
+            this.rDoi.Text = "Đội";
+            this.rDoi.UseVisualStyleBackColor = true;
             // 
             // cbLoaiBC
             // 
@@ -362,7 +404,7 @@
             this.reportNamLD.LocalReport.ReportEmbeddedResource = "CAPNUOCTHUDUC.Forms.DHN.BC.rptThongKeDHNTheoNam.rdlc";
             this.reportNamLD.Location = new System.Drawing.Point(0, 0);
             this.reportNamLD.Name = "reportNamLD";
-            this.reportNamLD.Size = new System.Drawing.Size(1108, 546);
+            this.reportNamLD.Size = new System.Drawing.Size(1108, 520);
             this.reportNamLD.TabIndex = 2;
             this.reportNamLD.Visible = false;
             // 
@@ -372,7 +414,7 @@
             this.reportQP.LocalReport.ReportEmbeddedResource = "CAPNUOCTHUDUC.Forms.DHN.BC.rptThongKeQPDHN.rdlc";
             this.reportQP.Location = new System.Drawing.Point(0, 0);
             this.reportQP.Name = "reportQP";
-            this.reportQP.Size = new System.Drawing.Size(1108, 546);
+            this.reportQP.Size = new System.Drawing.Size(1108, 520);
             this.reportQP.TabIndex = 1;
             this.reportQP.Visible = false;
             // 
@@ -382,50 +424,8 @@
             this.reportHieuDHN.LocalReport.ReportEmbeddedResource = "CAPNUOCTHUDUC.Forms.DHN.BC.rptThongKeHieuDHN.rdlc";
             this.reportHieuDHN.Location = new System.Drawing.Point(0, 0);
             this.reportHieuDHN.Name = "reportHieuDHN";
-            this.reportHieuDHN.Size = new System.Drawing.Size(1108, 546);
+            this.reportHieuDHN.Size = new System.Drawing.Size(1108, 520);
             this.reportHieuDHN.TabIndex = 0;
-            // 
-            // rQuan2
-            // 
-            this.rQuan2.AutoSize = true;
-            this.rQuan2.Location = new System.Drawing.Point(338, 15);
-            this.rQuan2.Name = "rQuan2";
-            this.rQuan2.Size = new System.Drawing.Size(116, 23);
-            this.rQuan2.TabIndex = 110;
-            this.rQuan2.Text = "Quận 2 + BD";
-            this.rQuan2.UseVisualStyleBackColor = true;
-            // 
-            // rQuan9
-            // 
-            this.rQuan9.AutoSize = true;
-            this.rQuan9.Location = new System.Drawing.Point(224, 15);
-            this.rQuan9.Name = "rQuan9";
-            this.rQuan9.Size = new System.Drawing.Size(75, 23);
-            this.rQuan9.TabIndex = 111;
-            this.rQuan9.Text = "Quận 9";
-            this.rQuan9.UseVisualStyleBackColor = true;
-            // 
-            // rThuDuc
-            // 
-            this.rThuDuc.AutoSize = true;
-            this.rThuDuc.Location = new System.Drawing.Point(109, 15);
-            this.rThuDuc.Name = "rThuDuc";
-            this.rThuDuc.Size = new System.Drawing.Size(85, 23);
-            this.rThuDuc.TabIndex = 108;
-            this.rThuDuc.Text = "Thủ Đức";
-            this.rThuDuc.UseVisualStyleBackColor = true;
-            // 
-            // rDoi
-            // 
-            this.rDoi.AutoSize = true;
-            this.rDoi.Checked = true;
-            this.rDoi.Location = new System.Drawing.Point(11, 15);
-            this.rDoi.Name = "rDoi";
-            this.rDoi.Size = new System.Drawing.Size(53, 23);
-            this.rDoi.TabIndex = 109;
-            this.rDoi.TabStop = true;
-            this.rDoi.Text = "Đội";
-            this.rDoi.UseVisualStyleBackColor = true;
             // 
             // A_tab_ThongKeDHN
             // 
@@ -437,7 +437,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12.75F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "A_tab_ThongKeDHN";
-            this.Size = new System.Drawing.Size(1108, 630);
+            this.Size = new System.Drawing.Size(1108, 600);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);

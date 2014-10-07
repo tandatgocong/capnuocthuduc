@@ -143,7 +143,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
         private void btXemThongTin_Click(object sender, EventArgs e)
         {
             currentPageIndex = 1;
-            pageSize = 200;
+            pageSize = 10000;
             pageNumber = 0;
             FirstRow = 0;
             LastRow = 0;
@@ -198,24 +198,30 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                 int flag = 0;
                 for (int i = 0; i < dataGrid.Rows.Count; i++)
                 {
-                    if ("True".Equals(this.dataGrid.Rows[i].Cells["checkChon"].Value + ""))
-                    {
+                    //if ("True".Equals(this.dataGrid.Rows[i].Cells["checkChon"].Value + ""))
+                    //{
                         flag++;
                         listDanhBa += ("'" + (this.dataGrid.Rows[i].Cells["G_DANHBO"].Value + "").Replace(" ", "") + "',");
-                    }
+                    //}
                 }
-                if (flag <= int.Parse(Utilities.Files.numberRecord))
-                {
                     frm_Option_BT frm = new frm_Option_BT(listDanhBa.Remove(listDanhBa.Length - 1, 1));
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         btXemThongTin_Click(sender, e);
                     }
-                }
-                else
-                {
-                    MessageBox.Show(this, "Bảng Kê Báo Thay <= " + Utilities.Files.numberRecord + " Danh Bộ", "..: Thông Báo :..", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                //}
+                //if (flag <= int.Parse(Utilities.Files.numberRecord))
+                //{
+                //    frm_Option_BT frm = new frm_Option_BT(listDanhBa.Remove(listDanhBa.Length - 1, 1));
+                //    if (frm.ShowDialog() == DialogResult.OK)
+                //    {
+                //        btXemThongTin_Click(sender, e);
+                //    }
+                //}
+                //else
+                //{
+                //    MessageBox.Show(this, "Bảng Kê Báo Thay <= " + Utilities.Files.numberRecord + " Danh Bộ", "..: Thông Báo :..", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //}
 
                 //  MessageBox.Show(this,listDanhBa.Remove(listDanhBa.Length-1,1)+ "--" +flag);
 

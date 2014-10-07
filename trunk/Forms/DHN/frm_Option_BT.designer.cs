@@ -42,6 +42,12 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.txtSoBangKe = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dataBangKe = new System.Windows.Forms.DataGridView();
+            this.btTaoBangKe = new DevComponents.DotNetBar.ButtonX();
+            this.btThoat = new DevComponents.DotNetBar.ButtonX();
+            this.galleryContainer1 = new DevComponents.DotNetBar.GalleryContainer();
+            this.btIn = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.G_STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.G_DANHBO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LOTRINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,12 +62,6 @@
             this.G_CHISO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.G_LYDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DOT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btTaoBangKe = new DevComponents.DotNetBar.ButtonX();
-            this.btThoat = new DevComponents.DotNetBar.ButtonX();
-            this.galleryContainer1 = new DevComponents.DotNetBar.GalleryContainer();
-            this.btIn = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.dataBangKe)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -157,122 +157,6 @@
             this.dataBangKe.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataBangKe_EditingControlShowing);
             this.dataBangKe.Sorted += new System.EventHandler(this.dataBangKe_Sorted);
             // 
-            // G_STT
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.G_STT.DefaultCellStyle = dataGridViewCellStyle2;
-            this.G_STT.Frozen = true;
-            this.G_STT.HeaderText = "STT";
-            this.G_STT.Name = "G_STT";
-            this.G_STT.Width = 40;
-            // 
-            // G_DANHBO
-            // 
-            this.G_DANHBO.DataPropertyName = "DANHBO";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.G_DANHBO.DefaultCellStyle = dataGridViewCellStyle3;
-            this.G_DANHBO.Frozen = true;
-            this.G_DANHBO.HeaderText = "DANH BỘ";
-            this.G_DANHBO.Name = "G_DANHBO";
-            this.G_DANHBO.Width = 130;
-            // 
-            // LOTRINH
-            // 
-            this.LOTRINH.DataPropertyName = "LOTRINH";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.LOTRINH.DefaultCellStyle = dataGridViewCellStyle4;
-            this.LOTRINH.Frozen = true;
-            this.LOTRINH.HeaderText = "LỘ TRÌNH";
-            this.LOTRINH.Name = "LOTRINH";
-            this.LOTRINH.Width = 120;
-            // 
-            // G_TENKH
-            // 
-            this.G_TENKH.DataPropertyName = "HOTEN";
-            this.G_TENKH.Frozen = true;
-            this.G_TENKH.HeaderText = "TÊN KHÁCH HÀNG";
-            this.G_TENKH.Name = "G_TENKH";
-            this.G_TENKH.Width = 220;
-            // 
-            // G_DIACHI
-            // 
-            this.G_DIACHI.DataPropertyName = "DIACHI";
-            this.G_DIACHI.Frozen = true;
-            this.G_DIACHI.HeaderText = "ĐỊA CHỈ";
-            this.G_DIACHI.Name = "G_DIACHI";
-            this.G_DIACHI.Width = 250;
-            // 
-            // NGAYTHAY
-            // 
-            this.NGAYTHAY.DataPropertyName = "NGAYTHAY";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "dd/MM/yyyy";
-            this.NGAYTHAY.DefaultCellStyle = dataGridViewCellStyle5;
-            this.NGAYTHAY.HeaderText = "NGÀY GẮN";
-            this.NGAYTHAY.Name = "NGAYTHAY";
-            this.NGAYTHAY.Width = 120;
-            // 
-            // G_HIEUDHN
-            // 
-            this.G_HIEUDHN.DataPropertyName = "HIEUDH";
-            this.G_HIEUDHN.HeaderText = "HIỆU ĐH";
-            this.G_HIEUDHN.Name = "G_HIEUDHN";
-            this.G_HIEUDHN.Width = 130;
-            // 
-            // G_CODHN
-            // 
-            this.G_CODHN.DataPropertyName = "CODH";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.G_CODHN.DefaultCellStyle = dataGridViewCellStyle6;
-            this.G_CODHN.HeaderText = "CỠ";
-            this.G_CODHN.Name = "G_CODHN";
-            this.G_CODHN.Width = 50;
-            // 
-            // G_SOTHAN
-            // 
-            this.G_SOTHAN.DataPropertyName = "SOTHANDH";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.G_SOTHAN.DefaultCellStyle = dataGridViewCellStyle7;
-            this.G_SOTHAN.HeaderText = "SỐ THÂN";
-            this.G_SOTHAN.Name = "G_SOTHAN";
-            this.G_SOTHAN.Width = 130;
-            // 
-            // CHITHAN
-            // 
-            this.CHITHAN.DataPropertyName = "CHITHAN";
-            this.CHITHAN.HeaderText = "CHÌ THÂN";
-            this.CHITHAN.Name = "CHITHAN";
-            this.CHITHAN.Width = 120;
-            // 
-            // DHN_CHIGOC
-            // 
-            this.DHN_CHIGOC.DataPropertyName = "CHIGOC";
-            this.DHN_CHIGOC.HeaderText = "CHÌ GÓC";
-            this.DHN_CHIGOC.Name = "DHN_CHIGOC";
-            // 
-            // G_CHISO
-            // 
-            this.G_CHISO.DataPropertyName = "CHISOKYTRUOC";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.G_CHISO.DefaultCellStyle = dataGridViewCellStyle8;
-            this.G_CHISO.HeaderText = "CHỈ SỐ";
-            this.G_CHISO.Name = "G_CHISO";
-            this.G_CHISO.Width = 90;
-            // 
-            // G_LYDO
-            // 
-            this.G_LYDO.DataPropertyName = "GHICHU";
-            this.G_LYDO.HeaderText = "LÝ DO";
-            this.G_LYDO.Name = "G_LYDO";
-            this.G_LYDO.Width = 150;
-            // 
-            // DOT
-            // 
-            this.DOT.DataPropertyName = "DOT";
-            this.DOT.HeaderText = "DOT";
-            this.DOT.Name = "DOT";
-            this.DOT.Visible = false;
-            // 
             // btTaoBangKe
             // 
             this.btTaoBangKe.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -363,6 +247,124 @@
             this.splitContainer1.Size = new System.Drawing.Size(1139, 561);
             this.splitContainer1.SplitterDistance = 134;
             this.splitContainer1.TabIndex = 108;
+            // 
+            // G_STT
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.G_STT.DefaultCellStyle = dataGridViewCellStyle2;
+            this.G_STT.Frozen = true;
+            this.G_STT.HeaderText = "STT";
+            this.G_STT.Name = "G_STT";
+            this.G_STT.Width = 40;
+            // 
+            // G_DANHBO
+            // 
+            this.G_DANHBO.DataPropertyName = "DANHBO";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.G_DANHBO.DefaultCellStyle = dataGridViewCellStyle3;
+            this.G_DANHBO.Frozen = true;
+            this.G_DANHBO.HeaderText = "DANH BỘ";
+            this.G_DANHBO.Name = "G_DANHBO";
+            this.G_DANHBO.Width = 130;
+            // 
+            // LOTRINH
+            // 
+            this.LOTRINH.DataPropertyName = "LOTRINH";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.LOTRINH.DefaultCellStyle = dataGridViewCellStyle4;
+            this.LOTRINH.Frozen = true;
+            this.LOTRINH.HeaderText = "LỘ TRÌNH";
+            this.LOTRINH.Name = "LOTRINH";
+            this.LOTRINH.Width = 120;
+            // 
+            // G_TENKH
+            // 
+            this.G_TENKH.DataPropertyName = "HOTEN";
+            this.G_TENKH.Frozen = true;
+            this.G_TENKH.HeaderText = "TÊN KHÁCH HÀNG";
+            this.G_TENKH.Name = "G_TENKH";
+            this.G_TENKH.Width = 220;
+            // 
+            // G_DIACHI
+            // 
+            this.G_DIACHI.DataPropertyName = "DIACHI";
+            this.G_DIACHI.Frozen = true;
+            this.G_DIACHI.HeaderText = "ĐỊA CHỈ";
+            this.G_DIACHI.Name = "G_DIACHI";
+            this.G_DIACHI.Width = 250;
+            // 
+            // NGAYTHAY
+            // 
+            this.NGAYTHAY.DataPropertyName = "NGAYTHAY";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "dd/MM/yyyy";
+            this.NGAYTHAY.DefaultCellStyle = dataGridViewCellStyle5;
+            this.NGAYTHAY.HeaderText = "NGÀY GẮN";
+            this.NGAYTHAY.Name = "NGAYTHAY";
+            this.NGAYTHAY.Width = 120;
+            // 
+            // G_HIEUDHN
+            // 
+            this.G_HIEUDHN.DataPropertyName = "HIEUDH";
+            this.G_HIEUDHN.HeaderText = "HIỆU ĐH";
+            this.G_HIEUDHN.Name = "G_HIEUDHN";
+            this.G_HIEUDHN.Width = 130;
+            // 
+            // G_CODHN
+            // 
+            this.G_CODHN.DataPropertyName = "CODH";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.G_CODHN.DefaultCellStyle = dataGridViewCellStyle6;
+            this.G_CODHN.HeaderText = "CỠ";
+            this.G_CODHN.Name = "G_CODHN";
+            this.G_CODHN.Width = 50;
+            // 
+            // G_SOTHAN
+            // 
+            this.G_SOTHAN.DataPropertyName = "SOTHANDH";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.G_SOTHAN.DefaultCellStyle = dataGridViewCellStyle7;
+            this.G_SOTHAN.HeaderText = "SỐ THÂN";
+            this.G_SOTHAN.Name = "G_SOTHAN";
+            this.G_SOTHAN.Width = 130;
+            // 
+            // CHITHAN
+            // 
+            this.CHITHAN.DataPropertyName = "CHITHAN";
+            this.CHITHAN.HeaderText = "CHÌ THÂN";
+            this.CHITHAN.Name = "CHITHAN";
+            this.CHITHAN.Visible = false;
+            this.CHITHAN.Width = 120;
+            // 
+            // DHN_CHIGOC
+            // 
+            this.DHN_CHIGOC.DataPropertyName = "CHIGOC";
+            this.DHN_CHIGOC.HeaderText = "CHÌ GÓC";
+            this.DHN_CHIGOC.Name = "DHN_CHIGOC";
+            this.DHN_CHIGOC.Visible = false;
+            // 
+            // G_CHISO
+            // 
+            this.G_CHISO.DataPropertyName = "CHISOKYTRUOC";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.G_CHISO.DefaultCellStyle = dataGridViewCellStyle8;
+            this.G_CHISO.HeaderText = "CHỈ SỐ";
+            this.G_CHISO.Name = "G_CHISO";
+            this.G_CHISO.Width = 90;
+            // 
+            // G_LYDO
+            // 
+            this.G_LYDO.DataPropertyName = "GHICHU";
+            this.G_LYDO.HeaderText = "LÝ DO";
+            this.G_LYDO.Name = "G_LYDO";
+            this.G_LYDO.Width = 150;
+            // 
+            // DOT
+            // 
+            this.DOT.DataPropertyName = "DOT";
+            this.DOT.HeaderText = "DOT";
+            this.DOT.Name = "DOT";
+            this.DOT.Visible = false;
             // 
             // frm_Option_BT
             // 

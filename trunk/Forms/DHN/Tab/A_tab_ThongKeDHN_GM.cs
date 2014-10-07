@@ -33,9 +33,38 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
             int ky = int.Parse(cbKyDS.Items[cbKyDS.SelectedIndex].ToString());
             int nam = int.Parse(txtNam.Text.Trim());
             string quanphuong = DAL.ThaoTac.getDuLieu(rDoi, rThuDuc, rQuan9, rQuan2);
-             string sql = "";
+            string sql = "";
             if (cbLoaiBC.SelectedIndex == 0)
             {
+                reportGMTONG.Visible = true;
+                reportDSGM.Visible = false;
+                reportHieuDHN.Visible = false;
+                reportQP.Visible = false;
+                reportNamLD.Visible = false;
+
+                sql = "SELECT DOT,COUNT(*) AS TONG, ";
+                sql += " COUNT(CASE WHEN LEFT(HIEUDH,3)='KEN' THEN 1 ELSE NULL END) AS 'KEN',  ";
+                sql += " COUNT(CASE WHEN LEFT(HIEUDH,3)='BAY' THEN 1 ELSE NULL END) AS 'BAY',";
+                sql += " COUNT(CASE WHEN LEFT(HIEUDH,3)='ACT' THEN 1 ELSE NULL END) AS 'ACT',";
+                sql += " COUNT(CASE WHEN LEFT(HIEUDH,3)='MUL' THEN 1 ELSE NULL END) AS 'MUL',";
+                sql += " COUNT(CASE WHEN LEFT(HIEUDH,3)='SEN' THEN 1 ELSE NULL END) AS 'SEN' ";
+                sql += " FROM TB_DULIEUKHACHHANG  ";
+                sql += " WHERE NAM=" + nam + " AND KY_=" + ky + quanphuong;
+                sql += " group by DOT order by DOT asc";
+                DataTable bang = DAL.LinQConnection.getDataTable(sql);
+                this.reportGMTONG.LocalReport.DataSources.Clear();
+
+                ReportParameter p1 = new ReportParameter("hl", " KỲ " + ky + "/" + nam);
+                ReportParameter p2 = new ReportParameter("tods", DAL.ThaoTac.getToDS(rDoi, rThuDuc, rQuan9, rQuan2));
+                this.reportGMTONG.LocalReport.SetParameters(new ReportParameter[] { p1, p2 });
+                this.reportGMTONG.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("TONGGM", bang));
+
+                this.reportGMTONG.RefreshReport();
+                //MessageBox.Show(this, reportViewer1.LocalReport.ReportPath.ToString());
+            }
+            else if (cbLoaiBC.SelectedIndex == 1)
+            {
+                reportGMTONG.Visible = false;
                 reportDSGM.Visible = false;
                 reportHieuDHN.Visible = true;
                 reportQP.Visible = false;
@@ -57,6 +86,10 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 sql += " COUNT(CASE WHEN CODH=400 THEN 1 ELSE NULL END) AS CO400 ";
                 sql += " FROM dbo.TB_DULIEUKHACHHANG kh  ";
                 sql += " WHERE kh.NAM=" + nam + " AND kh.KY_=" + ky + quanphuong;
+                if (dot != 0)
+                {
+                    sql += " AND CONVERT(INT,kh.DOT)=" + dot;
+                }
                 sql += " GROUP BY  LEFT(HIEUDH,3)";
                 DataTable bang = DAL.LinQConnection.getDataTable(sql);
                 this.reportHieuDHN.LocalReport.DataSources.Clear();
@@ -69,8 +102,9 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 this.reportHieuDHN.RefreshReport();
                 //MessageBox.Show(this, reportViewer1.LocalReport.ReportPath.ToString());
             }
-            else if (cbLoaiBC.SelectedIndex == 1)
+            else if (cbLoaiBC.SelectedIndex == 2)
             {
+                reportGMTONG.Visible = false;
                 reportDSGM.Visible = false;
                 reportHieuDHN.Visible = false;              
                 reportNamLD.Visible = false;
@@ -92,6 +126,10 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
 	            sql += " FROM dbo.TB_DULIEUKHACHHANG kh ,TB_QUAN q, TB_PHUONG p ";
 	            sql += " WHERE kh.QUAN=q.MAQUAN AND kh.PHUONG=p.MAPHUONG AND q.MAQUAN=p.MAQUAN  ";
                 sql += " AND  kh.NAM=" + nam + " AND kh.KY_=" + ky + quanphuong;
+                if (dot != 0)
+                {
+                    sql += " AND CONVERT(INT,kh.DOT)=" + dot;
+                }
 	            sql += " GROUP BY q.MAQUAN,q.TENQUAN,p.MAPHUONG,p.TENPHUONG ";
                 sql += " ORDER BY q.MAQUAN ASC, p.MAPHUONG ASC ";
                 DataTable bang = DAL.LinQConnection.getDataTable(sql);
@@ -102,8 +140,9 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 reportQP.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("DHN_QUANPHUONG", bang));
                 this.reportQP.RefreshReport();
             }
-            else if (cbLoaiBC.SelectedIndex == 2)
+            else if (cbLoaiBC.SelectedIndex == 3)
             {
+                reportGMTONG.Visible = false;
                 reportHieuDHN.Visible = false;
                 reportNamLD.Visible = true;
                 reportQP.Visible = false;
@@ -124,6 +163,10 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 sql += " COUNT(CASE WHEN CODH=400 THEN 1 ELSE NULL END) AS CO400 ";
                 sql += " FROM dbo.TB_DULIEUKHACHHANG kh  ";
                 sql += " WHERE  kh.NAM=" + nam + " AND kh.KY_=" + ky + quanphuong;
+                if (dot != 0)
+                {
+                    sql += " AND CONVERT(INT,kh.DOT)=" + dot;
+                }
                 sql += " GROUP BY DOT  ";
                 sql += " ORDER BY DOT  ASC ";
                 DataTable bang = DAL.LinQConnection.getDataTable(sql);
@@ -135,8 +178,9 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 this.reportNamLD.RefreshReport();
 
             }
-            else if (cbLoaiBC.SelectedIndex == 2)
+            else if (cbLoaiBC.SelectedIndex == 4)
             {
+                reportGMTONG.Visible = false;
                 reportHieuDHN.Visible = false;
                 reportNamLD.Visible = true;
                 reportQP.Visible = false;
@@ -157,6 +201,10 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 sql += " COUNT(CASE WHEN CODH=400 THEN 1 ELSE NULL END) AS CO400 ";
                 sql += " FROM dbo.TB_DULIEUKHACHHANG kh  ";
                 sql += " WHERE  kh.NAM=" + nam + " AND kh.KY_=" + ky + quanphuong;
+                if (dot != 0)
+                {
+                    sql += " AND CONVERT(INT,kh.DOT)=" + dot;
+                }
                 sql += " GROUP BY DOT  ";
                 sql += " ORDER BY DOT  ASC ";
                 DataTable bang = DAL.LinQConnection.getDataTable(sql);
@@ -168,7 +216,9 @@ namespace CAPNUOCTHUDUC.Forms.DHN.Tab
                 this.reportNamLD.RefreshReport();
 
             }
-            else {
+            else 
+            {
+                reportGMTONG.Visible = false;
                 reportHieuDHN.Visible = false;
                 reportNamLD.Visible = false;
                 reportQP.Visible = false;

@@ -236,6 +236,7 @@
     <None Include="lib\LOTRINH.xls" />
     <None Include="lib\News.xls" />
     <None Include="lib\user.dat" />
+    <EmbeddedResource Include="Forms\DHN\BC\rptThongKeGMTong.rdlc" />
     <EmbeddedResource Include="Forms\DHN\BC\rptPhanTichHieuDHN.rdlc" />
     <EmbeddedResource Include="Forms\DHN\BC\rptDanhSachGanMoi_DOT.rdlc" />
     <EmbeddedResource Include="Forms\DHN\BC\rptDanhSachGanMoi.rdlc" />
