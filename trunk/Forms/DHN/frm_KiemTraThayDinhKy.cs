@@ -85,7 +85,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
             else
                 if (this.ckNgayThay.Checked && this.checHieu.Checked)
                 {
-                    sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL) " + quan + " AND CODH" + codh + " AND NGAYTHAY <= '" + date.ToShortDateString() + "'  ";
+                    sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL) " + quan + " AND CODH" + codh + " AND CONVERT(DATETIME,NGAYTHAY,103) <= CONVERT(DATETIME,'" + date.ToShortDateString() + "',103)  ";
                     sql += " AND (HIEUDH='" + cbHieuDongHo.SelectedValue + "' OR HIEUDH='" + cbHieuDongHo.Text + "')  " + dot;
                     //DataTable table = DAL.LinQConnection.getDataTable(sql);
                     //dataGrid.DataSource = table;
@@ -93,7 +93,7 @@ namespace CAPNUOCTHUDUC.Forms.DHN
                 }
                 else if (this.ckNgayThay.Checked)
                 {
-                    sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL)  " + quan + " AND CODH" + codh + "  AND NGAYTHAY <= '" + date.ToShortDateString() + "'  " + dot;
+                    sql = "SELECT CODE,CHISOKYTRUOC, DANHBO,LOTRINH,DOT, HOTEN, (SONHA +' '+ TENDUONG) AS 'DIACHI',NGAYTHAY,LEFT(HIEUDH,3) as 'HIEUDH',SOTHANDH,CODH,' ' as GBAOTHAY FROM  TB_DULIEUKHACHHANG WHERE (BAOTHAY!=1 OR BAOTHAY IS NULL)  " + quan + " AND CODH" + codh + "  AND CONVERT(DATETIME,NGAYTHAY,103) <= CONVERT(DATETIME,'" + date.ToShortDateString() + "' ,103) " + dot;
                     //DataTable table = DAL.LinQConnection.getDataTable(sql);
                     //dataGrid.DataSource = table;
                     //Utilities.DataGridV.formatRows(dataGrid);
